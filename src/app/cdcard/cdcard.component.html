@@ -1,0 +1,79 @@
+
+<!-- -----------------------------Display Debit Card --------------------------------->
+<div class="Card">
+  <h1>Add New Card</h1>
+  <p>WE ACCEPT</p>
+  <div class="CardBoxes">
+    <img src="./assets/debitCardChip.png" alt="" class="Chip">
+    <img src="./assets/CityUnionBankLogo.jpg" alt="" class="BankName" *ngIf="isCityUnionBank">
+    <img src="./assets/KVBBankLogo.png" alt="" class="BankName" *ngIf="isKVB">
+    <img src="./assets/DBSBankLogo.png" alt="" class="BankName" *ngIf="isDBS">
+    <img src="./assets/HDFCBankLogo.png" alt="" class="BankName" *ngIf="isHDFC">
+
+
+    <!-- -----------------Card Form---------------------------------- -->
+
+    <div class="debitForm">
+      <form [formGroup]="myForm">
+        <div class="debitForms">
+          <label for="CardNumber"
+            *ngIf="!myForm.controls['CardNumber'].errors?.['required'] && !myForm.controls['CardNumber'].errors?.['pattern'] || !myForm.controls['CardNumber'].dirty">CARD
+            NUMBER</label>
+          <label
+            *ngIf="myForm.controls['CardNumber'].errors?.['required'] && myForm.controls['CardNumber'].invalid && myForm.controls['CardNumber'].dirty"
+            class="invalid">ENTER CARD NUMBER</label>
+          <label
+            *ngIf="myForm.controls['CardNumber'].errors?.['pattern'] && (myForm.controls['CardNumber'].invalid || myForm.controls['CardNumber'].dirty)"
+            class="invalid">INVALID CARD NUMBER</label>
+
+          <input type="tel" class="CardNumber" formControlName="CardNumber" maxlength="16"
+            placeholder="0000000000000000">
+        </div>
+        <div class="debitForms">
+          <div class="debitFormsFlex">
+            <label for="ExpDate"
+              *ngIf="!myForm.controls['ExpDate'].errors?.['required'] && !myForm.controls['ExpDate'].errors?.['pattern'] || !myForm.controls['ExpDate'].dirty">EXP
+              DATE</label>
+            <label
+              *ngIf="myForm.controls['ExpDate'].errors?.['required'] && myForm.controls['ExpDate'].invalid && myForm.controls['ExpDate'].dirty"
+              class="invalid">ENTER EXP DATE</label>
+            <label
+              *ngIf="myForm.controls['ExpDate'].errors?.['pattern'] && (myForm.controls['ExpDate'].invalid || myForm.controls['ExpDate'].dirty)"
+              class="invalid">INVALID EXP DATE</label><br>
+            <input type="tel" class="ExpiryDate" formControlName="ExpDate" placeholder="00/00">
+          </div>
+          <div class="debitFormsFlex">
+            <label for="CVV"
+              *ngIf="!myForm.controls['CVV'].errors?.['required'] && !myForm.controls['CVV'].errors?.['pattern'] || !myForm.controls['CVV'].dirty">CVV</label>
+            <label
+              *ngIf="myForm.controls['CVV'].errors?.['required'] && myForm.controls['CVV'].invalid && myForm.controls['CVV'].dirty"
+              class="invalid">ENTER CVV</label>
+            <label
+              *ngIf="myForm.controls['CVV'].errors?.['pattern'] && (myForm.controls['CVV'].invalid || myForm.controls['CVV'].dirty)"
+              class="invalid">INVALID CVV</label><br>
+
+            <input type="password" class="CVV" formControlName="CVV" maxlength="4" placeholder="0000">
+          </div>
+        </div>
+        <div class="debitForms">
+          <label for="HolderName"
+            *ngIf="!myForm.controls['HolderName'].errors?.['required'] && !myForm.controls['HolderName'].errors?.['pattern'] || !myForm.controls['HolderName'].dirty">CARD
+            HOLDER NAME</label>
+          <label
+            *ngIf="myForm.controls['HolderName'].errors?.['required'] && myForm.controls['HolderName'].invalid && myForm.controls['HolderName'].dirty"
+            class="invalid">ENTER CARD HOLDER NAME</label>
+          <label
+            *ngIf="myForm.controls['HolderName'].errors?.['pattern'] && (myForm.controls['HolderName'].invalid || myForm.controls['HolderName'].dirty)"
+            class="invalid">INVALID CARD HOLDER NAME</label><br>
+          <input type="text" class="CardHolderName" formControlName="HolderName" #HolderName
+            (keyup)="HolderName.value=HolderName.value.toUpperCase()" placeholder="xxxxxxxxxx">
+        </div>
+        <button [disabled]="!myForm.valid" type="submit" (click)="saveCardDetails(myForm.value)">TO PAY ₹
+          {{cartTotalPrice}}</button>
+      </form>
+    </div>
+    <img src="./assets/MasterCardLogo.png" alt="" class="CardType" *ngIf="isMasterCard">
+    <img src="./assets/VisaLogo.png" alt="" class="CardType" *ngIf="isVisa">
+  </div>
+
+</div>

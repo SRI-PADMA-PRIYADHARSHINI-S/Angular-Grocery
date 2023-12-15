@@ -1,0 +1,215 @@
+
+*{
+  font-family: sans-serif;
+}
+
+.commonBox{
+  display:flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  width: 800px;
+  box-shadow: 1.5px 0.5px 5px 2px rgba(0,0,0,0.2);
+  margin-left: 25px;
+}
+
+.Address h1{
+  padding: 20px 0px 10px 30px;
+  font-weight: bold;
+  font-size: 1.4vw;
+}
+
+.category{
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  margin-left: 6%;
+  gap: 2%;
+  padding: 20px;
+  padding-right: 30px;
+}
+
+.emptyAddress{
+  display: flex;
+  flex-wrap: wrap;
+}
+ .addAddress{
+  box-shadow: 1.5px 0.5px 5px 2px rgba(0,0,0,0.2);
+  margin-left: 40px;
+  margin-bottom: 40px;
+  width: 300px;
+ }
+.addAddress i{
+  margin: 30px;
+  font-size: 1.3vw;
+  color: #60b246;
+}
+
+.addAddress p{
+  color: black;
+  margin-left: 70px;
+  font-size: 1vw;
+  margin-top: -50px;
+  font-weight: bold;
+}
+
+.addAddress .deliveryButton{
+  cursor: pointer;
+  background-color: #60b246;
+  font-size: 0.9vw;
+  font-weight: bold;
+  color: white;
+  padding: 10px;
+  margin-top: 30px;
+  margin-left: 60px;
+  margin-bottom: 40px;
+}
+
+.addAddress button{
+  cursor: pointer;
+  background-color: white;
+  border: 2px solid #60b246;
+  font-size: 0.9vw;
+  font-weight: bold;
+  color: #60b246;
+  padding: 15px;
+  margin: 50px;
+}
+.addAddress div{
+  margin-top: 30px;
+}
+.addAddress div p{
+  margin-top: 0px;
+  font-size: 0.7vw;
+  color: gray;
+  font-weight: lighter;
+}
+
+.background{
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(6, 76, 240, 0.233);
+  z-index: 1;
+}
+
+.AddressShow{
+  height: 100%;
+  width: 37%;
+  background-color: white;
+  position: absolute;
+  left: 0;
+  animation: slide 0.2s linear 1;
+  transition: transform 500ms ease-in-out;
+  transform-origin: left;
+}
+@keyframes slide {
+from{
+  transform: scaleX(0);
+}
+to{
+  transform: scaleX(1);
+}
+}
+.exit{
+  background-color: white;
+  border: none;
+  font-size: 2vw;
+  margin-left: 86%;
+  margin-top: 4%;
+  cursor: pointer;
+}
+.exit:hover{
+  color: #27ae60;
+}
+.AddressShow h1{
+  margin-left: 30%;
+  margin-top: 5%;
+  font-weight: bold;
+  font-size: 2vw;
+}
+.image{
+  border-radius: 50%;
+  width: 15%;
+  height: 15%;
+  margin-top: -15%;
+  margin-left: 7%;
+}
+.AddressForm{
+  display: flex;
+  flex-direction: column;
+  margin-top: 6%;
+  margin-left: 25%;
+}
+.forms{
+  height: 10vh;
+  width: 80%;
+  background-color: white;
+   /* border: 0.05vw solid rgb(114, 110, 110);  */
+}
+label{
+  position: absolute;
+  left: 9%;
+  font-weight: bold;
+  font-size: 1.2vw;
+  transition: top 200ms ease-in-out,left 200ms ease-in-out,font-size 200ms ease-in-out;
+}
+input{
+  margin-left: 12%;
+  margin-top: 0.6%;
+  width: 80%;
+  height: 4vh;
+  border: none;
+  padding-left: 5%;
+  font-size: 1.3vw;
+  border: 2px solid black;
+  font-weight: bold;
+}
+input:focus{
+  border: none;
+  outline: none;
+  border: 2px solid black;
+}
+
+.AddressButton{
+  margin-top: 2%;
+  width: 70%;
+  height: 7vh;
+  background-color: #27ae60;
+  color: white;
+  font-weight: bold;
+  font-size: 1vw;
+  cursor: pointer;
+}
+.forms:nth-child(4){
+  display: flex;
+}
+.formsIcon{
+  border-left: 0.05vw solid gray;
+  width: 100px;
+  display: grid;
+  place-items: center;
+}
+.forms button{
+  font-size: 0.9vw;
+  font-weight: lighter;
+  color: gray;
+  cursor: pointer;
+  background: white;
+  border: none;
+}
+.paymentButton{
+  width: 200px;
+  height: 40px;
+  margin-left: 45px;
+  margin-bottom: 30px;
+  border: none;
+  background: #60b246;
+  color: white;
+  font-size: 1.1vw;
+  font-weight: bold;
+  cursor: pointer;
+}

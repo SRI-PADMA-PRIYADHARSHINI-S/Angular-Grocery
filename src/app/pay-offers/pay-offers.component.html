@@ -1,0 +1,49 @@
+
+
+<!-- -----------------------------Fontawesome link for the icons--------------------------------->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+<!-- -------------------display the coupons ------------------------- -->
+<div class="hotel">
+  <h1>Available Coupons</h1>
+  <div class="coupons">
+    <div class="hotels" *ngFor="let values of available">
+      <div class="couponName">
+        <img src="{{values.AppImage}}" alt="">
+        <h3>{{values.AppCode}}</h3>
+      </div>
+      <h4>{{values.offerDesc1}}</h4>
+      <h5>{{values.offerDesc2}}</h5>
+
+      <h2>+ MORE</h2>
+
+      <button>COPY CODE</button>
+    </div>
+  </div>
+
+  <h1>UnAvailable Coupons</h1>
+  <div class="coupons">
+    <div class="hotels" *ngFor="let values of unavailable">
+      <div class="couponName">
+        <img src="{{values.AppImage}}" alt="">
+        <h3>{{values.AppCode}}</h3>
+      </div>
+      <h4>{{values.offerDesc1}}</h4>
+      <h5>{{values.offerDesc2}}</h5>
+
+      <h2>+ MORE</h2>
+
+      <button>COPY CODE</button>
+    </div>
+  </div>
+
+  <h1>Bank Offers</h1>
+  <div class="coupons">
+    <div class="hotels" *ngFor="let values of bankOffers">
+        <img src="{{values.AppImage}}" alt="" class="bankimage">
+        <h3 class="bankAppcode">{{values.AppCode}}</h3>
+        <h5 class="bankofferDesc">{{values.offerDesc}}</h5>
+      <h2 class="more">+ MORE</h2>
+    </div>
+  </div>
+</div>

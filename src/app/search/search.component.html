@@ -1,0 +1,48 @@
+
+
+<!-- -----------------------------fontawesome link for the icons --------------------------------->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+<!-- -----------------------------Display search bar--------------------------- -->
+<div class="item">
+  <div class="items">
+<form>
+  <div class="form-control">
+    <form [formGroup]="category">
+    <input type="text" placeholder="Search what you need" formControlName="categoryname" [(ngModel)]="categoryName">
+    <i class="fa-solid fa-xmark" *ngIf="iscategoryName" (click)="clear()"></i>
+  </form>
+  </div>
+</form>
+  </div>
+  <div class="items" *ngIf="issearched">
+    <h3>Recent Searches</h3>
+    <h3 class="more" >SHOW MORE</h3>
+    <div class="recents" *ngFor="let categoryName of data; let ind=index">
+      <i class="fa-solid fa-magnifying-glass"></i>
+      <h3 (click)="categoryRoute(ind)">{{categoryName}}</h3>
+    </div>
+  </div>
+  <div class="items" *ngIf="issearched">
+    <h4>Product for search</h4>
+    </div>
+    <div class="items" *ngIf="issearched">
+      <div class="images" *ngFor="let cuisine of cuisines">
+        <img src="{{cuisine}}" alt="">
+      </div>
+    </div>
+
+    <div class="items" *ngIf="iscategoryName">
+      <div class="searchItem" *ngFor="let arrays of finalArray; let ind=index" (click)="sendCategory(ind)">
+        <div>
+          <img src="{{arrays.categoryimage}}" alt="">
+          <h4>{{arrays.categoryname}}</h4>
+          <h5>Product</h5>
+        </div>
+      </div>
+      <div *ngIf="isfound">
+        <h5 class="error">No Results Found</h5>
+      </div>
+    </div>
+  </div>
+

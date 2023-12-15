@@ -1,0 +1,23 @@
+
+
+<!-- -----------------------------Display Offer details --------------------------------->
+
+<div class="top">
+  <h3>OFFERS FOR YOU</h3>
+  <h5>Explore top deals and offers exclusively for you..</h5>
+
+</div>
+<!-- -----------------------display Child Navbar----------------------------- -->
+<div class="secondnav">
+  <div>
+    <h3><a [routerLink]="ResOffers" routerLinkActive="activeLink">Combo Offers</a></h3>
+  </div>
+  <div>
+    <h3><a [routerLink]="PayOffers" routerLinkActive="activeLink">Deal of the day</a></h3>
+  </div>
+</div>
+<!-- ------------------------display Child routing Components-------------------- -->
+<div class="contents">
+  <router-outlet></router-outlet>
+</div>
+

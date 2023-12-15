@@ -1,0 +1,35 @@
+
+<!-- -----------------------------Display NavBar --------------------------------->
+
+<div class="NavBarHeader">
+  <!-- <h4>Saragro</h4> -->
+    <div class="NavBarLogo">
+      <a [routerLink]="home"><img src="./assets/LOGO.jpeg" alt="LOGO"></a>
+    </div>
+    <div >
+      <nav class="NavBarNav">
+        <div> <li><a [routerLink]="search" routerLinkActive="ActiveLink"><i class="fa-solid fa-magnifying-glass"></i>&nbsp;&nbsp;Search</a></li>
+        </div>
+        <div> <li> <a [routerLink]="offers" routerLinkActive="ActiveLink"><i class="fa-solid fa-percent"></i>&nbsp;&nbsp;Offers</a></li>
+        </div>
+        <div> <li> <a [routerLink]="Help" routerLinkActive="ActiveLink"><i class="fa-sharp fa-solid fa-life-ring"></i>&nbsp;&nbsp;Help</a></li>
+        </div>
+        <div *ngIf="!user"> <li> <a [routerLink]="loginUser" routerLinkActive="ActiveLink"><i class="fa-sharp fa-regular fa-user"></i>&nbsp;&nbsp;Log in</a></li>
+        </div>
+        <div *ngIf="user" class="NavBarUser"> <li><i class="fa-sharp fa-regular fa-user"></i>&nbsp;&nbsp;{{username}}</li>
+          <div class="NavBarLogout">
+            <li>
+              <a [routerLink]="profile" class="NavBarProfile">profile</a>
+            </li><br>
+            <li>
+              <a routerLink="" class="NavBarProfile" (click)="LogOut()">log out</a>
+            </li><br>
+          </div>
+        </div>
+        <div> <li><div class="NavBarcart"><div [ngClass]="iscart?'colored':'circle'" id="circle"><h4 id="count" [ngClass]="iscart?'cartCountTrue':'cartCountfalse'">{{cartCount}}</h4></div> <div><a [routerLink]="cart" routerLinkActive="activeLink" class="cart">&nbsp;cart</a></div></div></li>
+        </div>
+      </nav>
+    </div>
+  </div>
+
+

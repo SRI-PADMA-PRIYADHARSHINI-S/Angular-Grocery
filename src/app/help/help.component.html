@@ -1,0 +1,30 @@
+
+
+<!-- -----------------------------Display Help details --------------------------------->
+<div class="outer">
+
+
+  <div class="Heading">
+    <h1>Help & Support</h1>
+    <h2>let's take a step ahead and help you better</h2>
+  </div>
+
+  <div class="HelpBox">
+    <div class="content">
+      <div class="boxes">
+        <div class="left" [ngStyle]="{'background-color':Legalbgcolor}">
+          <a (click)="Legal()" [ngStyle]="{'color':Legalcolor}" [routerLink]="Help">&nbsp;&nbsp;Legal</a>
+        </div>
+        <div class="left" [ngStyle]="{'background-color':FAQsbgcolor}">
+          <a (click)="FAQs()" [ngStyle]="{'color':FAQscolor}" routerLink="FAQs">&nbsp;&nbsp;FAQs</a>
+        </div>
+      </div>
+      <div class="boxes">
+        <router-outlet></router-outlet>
+      </div>
+    </div>
+    </div>
+
+
+</div>
+

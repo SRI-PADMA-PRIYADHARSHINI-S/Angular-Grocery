@@ -1,0 +1,67 @@
+
+
+<!-- -----------------------------fontawesome link for the icons--------------------------------->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+<div class="outer">
+
+  <!-- ----------------------------Display user details------------------ -->
+  <div class="details">
+    <div>
+      <h1>{{userDetails.username}}</h1>
+      <h2>{{userDetails.phonenumber}}  &nbsp; . &nbsp;&nbsp; {{userDetails.email}}</h2>
+    </div>
+    <div>
+      <button (click)="showEditprofile()">Edit Profile</button>
+    </div>
+  </div>
+
+  <div class="profilebox">
+    <div class="content">
+      <div class="boxes">
+        <div class="left" [ngStyle]="{'background-color':Ordresbgcolor}">
+          <a routerLink="orders" [ngStyle]="{'color':Orderscolor}" (click)="Orders()" ><i class="fa-sharp fa-solid fa-bag-shopping"></i>&nbsp;&nbsp;Orders</a>
+        </div>
+        <div class="left" [ngStyle]="{'background-color':favoritesbgcolor}">
+          <a routerLink="Favorites" [ngStyle]="{'color':favoritescolor}" (click)="Favorites()"><i class="fa-sharp fa-solid fa-heart"></i>&nbsp;&nbsp;favorites</a>
+        </div>
+        <div class="left" [ngStyle]="{'background-color':addressbgcolor}">
+          <a routerLink="Address" [ngStyle]="{'color':addresscolor}" (click)="Address()"><i class="fa-solid fa-location-dot"></i>&nbsp;&nbsp;address</a>
+        </div>
+        <div class="left" [ngStyle]="{'background-color':paymentbgcolor}">
+          <a routerLink="Payment" [ngStyle]="{'color':paymentcolor}" (click)="Payment()"><i class="fa-regular fa-credit-card"></i>&nbsp;&nbsp;payment</a>
+        </div>
+      </div>
+      <div class="boxes">
+        <router-outlet></router-outlet>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- -----------------------Edit profile Form---------------- -->
+<div class="background" *ngIf="isEditProfile">
+  <div class="editProfile">
+    <button class="exit" (click)="close()"><i class="fa-solid fa-xmark"></i></button>
+    <h1>Edit Profile</h1>
+    <img src="./assets/img9.jpeg" alt="image" class="image">
+
+    <div class="editForm">
+      <form [formGroup]="editProfile">
+        <div class="forms">
+          <label for="editProfileUsername"*ngIf="!editProfile.controls['editProfileUsername'].errors?.['required'] && !editProfile.controls['editProfileUsername'].errors?.['pattern'] || !editProfile.controls['editProfileUsername'].dirty">Username</label>
+          <label *ngIf="editProfile.controls['editProfileUsername'].errors?.['required'] && editProfile.controls['editProfileUsername'].invalid && editProfile.controls['editProfileUsername'].dirty" class="invalid">Please enter Username</label>
+          <label *ngIf="editProfile.controls['editProfileUsername'].errors?.['pattern'] && (editProfile.controls['editProfileUsername'].invalid || editProfile.controls['editProfileUsername'].dirty)" class="invalid">invalid Username</label>
+          <input type="text" placeholder=" " name="editProfileUsername"  formControlName="editProfileUsername" >
+        </div>
+        <div class="forms">
+          <label for="editProfileEmail"*ngIf="!editProfile.controls['editProfileEmail'].errors?.['required'] && !editProfile.controls['editProfileEmail'].errors?.['pattern'] || !editProfile.controls['editProfileEmail'].dirty">Email</label>
+          <label *ngIf="editProfile.controls['editProfileEmail'].errors?.['required'] && editProfile.controls['editProfileEmail'].invalid && editProfile.controls['editProfileEmail'].dirty" class="invalid">Please enter Email</label>
+          <label *ngIf="editProfile.controls['editProfileEmail'].errors?.['pattern'] && (editProfile.controls['editProfileEmail'].invalid || editProfile.controls['editProfileEmail'].dirty)" class="invalid">invalid Email</label>
+          <input type="text" placeholder=" " name="editProfileEmail" formControlName="editProfileEmail">
+        </div>
+        <button class="edit" type="submit" [disabled]="!editProfile.valid" (click)="editProfileDetails(editProfile.value)">Edit Profile</button>
+      </form>
+    </div>
+  </div>
+</div>

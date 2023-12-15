@@ -1,0 +1,57 @@
+
+
+.commonBox{
+
+  display:flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  width: 800px;
+}
+
+.commonBoxes{
+
+  width: 90%;
+  /* height: 50px; */
+  margin-left: 35px;
+  border-bottom: 1px solid gray;
+  padding: 40px 0px 30px 0px;
+}
+
+.commonBoxes h2{
+
+  font-size: 1.1vw;
+  font-weight: lighter;
+  color: gray;
+  cursor: pointer;
+}
+
+.commonBoxes h2:hover{
+  color: #27ae60;
+}
+
+.commonBoxes p{
+  font-size: 0.9vw;
+  color: gray;
+  margin: 10px;
+  line-height: 20px;
+}
+
+.commonBoxes a{
+  text-decoration: none;
+  color: #27ae60;
+  font-weight: bold;
+  cursor: pointer;
+  margin: 10px;
+  font-size: 0.9vw;
+}
+
+.commonBoxes a:hover{
+  color: #170f40;
+}
+
+.Legal h1{
+
+  padding: 20px 0px 10px 30px;
+  font-weight: bold;
+  font-size: 1.5vw;
+}

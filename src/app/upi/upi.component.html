@@ -1,0 +1,19 @@
+
+
+<!-- -----------------------------Display UPI details --------------------------------->
+<div class="UPI">
+  <div class="UPIBoxes">
+    <img src="./assets/UPI.jpg" alt="bank">
+    <p>Transfer money from your bank account using UPI </p>
+    <h1>Select Your UPI Method:</h1>
+    <div class="UPILink">
+      <div class="UPILinks" *ngFor="let upiImages of UPIArray; let ind=index">
+        <img src="{{upiImages.upiImage}}" alt="bank" (click)="SendPaymentUPI(ind)">
+      </div>
+    </div>
+    <h1>Total Price : ₹ {{cartTotalPrice}}</h1>
+    <button (click)="SendPaymentCashOnDelivery()">Cash On Delivery</button>
+  </div>
+
+  </div>
+

@@ -1,0 +1,24 @@
+
+
+<!-- -----------------font awesome link for the icons----------------------- -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+<!-- ----------------display the categorys based on delivery time-------------------- -->
+<div class="category">
+  <div class="categorys" *ngFor="let realTimes of realTime; let ind=index" (click)="sendCategory(ind)">
+    <img src="{{realTimes.categoryimage}}" alt="">
+    <h4>{{realTimes.categoryname}}</h4>
+    <h5>{{realTimes.productvariety}}</h5>
+    <div class="offer">
+      <div class="rating"><i class="fa-solid fa-star"></i> {{realTimes.Rating}}</div>
+      <div class="time"><h5>{{realTimes.timeDel}}&nbsp;MINS</h5></div>
+      <div class="rate"><h5>{{realTimes.Costfortwo}}&nbsp;FOR&nbsp;TWO</h5></div>
+    </div>
+    <div class="offer_1" *ngIf="realTimes.offer.length>=1">
+      <i class="fa-solid fa-percent"></i>
+      <h4>{{realTimes.offer}}</h4>
+    </div>
+    <h4 class="view">QUICK VIEW</h4>
+  </div>
+</div>

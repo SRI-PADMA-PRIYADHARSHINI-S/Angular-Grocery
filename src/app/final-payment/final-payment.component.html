@@ -1,0 +1,31 @@
+
+
+<!-- -----------------------------Display Payment Methods --------------------------------->
+<div class="outer">
+
+
+  <div class="Heading">
+    <h1>Payment</h1>
+    <h2>let's take a step ahead and help you better</h2>
+  </div>
+
+  <div class="HelpBox">
+    <div class="content">
+      <div class="boxes">
+        <div class="left" [ngStyle]="{'background-color':Walletbgcolor}">
+          <a (click)="Wallets()" [ngStyle]="{'color':Walletcolor}" routerLink="Wallets">&nbsp;&nbsp;Wallets</a>
+        </div>
+        <div class="left" [ngStyle]="{'background-color':UPIbgcolor}">
+          <a (click)="UPI()" [ngStyle]="{'color':UPIcolor}" routerLink="UPI">&nbsp;&nbsp;UPI</a>
+        </div>
+        <!-- <div class="left" [ngStyle]="{'background-color':Cardbgcolor}">
+          <a (click)="Cards()" [ngStyle]="{'color':Cardcolor}" routerLink="CDCard">&nbsp;&nbsp;Credit & Debit Card</a>
+        </div> -->
+      </div>
+        <router-outlet></router-outlet>
+    </div>
+
+
+</div>
+</div>
+

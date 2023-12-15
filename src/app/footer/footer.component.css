@@ -1,0 +1,149 @@
+footer{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 30px;
+  height: auto;
+  width: 86%;
+  padding: 50px 100px;
+  background-color: rgb(1, 1, 58);
+}
+footer .lastcontainer{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+footer .lastcontainer .sec{
+ margin-right: 30px;
+}
+footer .lastcontainer .sec.aboutus{
+  width:40%;
+}
+footer .lastcontainer h2{
+  position: relative;
+  color:white;
+  font-weight: 500;
+  margin-bottom: 15px;
+
+}
+footer .lastcontainer h2:before{
+   content:'';
+   position:absolute;
+   bottom: -5px;
+   left:0;
+   width:50px;
+   height:2.5px;
+   background: #27ae60;
+}
+footer .lastcontainer p{
+  color:rgb(153, 153, 153);
+}
+.links{
+  margin-top: 20px;
+  display: flex;
+}
+.links li{
+  list-style: none;
+}
+.links li a{
+  display: inline-block;
+  width:40px;
+  height:40px;
+  background: rgb(88, 85, 85);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right:10px;
+  text-decoration: none;
+  border-radius:5px;
+}
+.links li a:hover{
+  background:#27ae60;
+}
+.links li a .fa-brands{
+  color:white;
+  font-size: 20px;
+}
+.quicklinks ul li{
+  list-style: none;
+  padding-top:10px;
+}
+.quicklinks ul li a{
+  color:rgb(153, 153, 153);
+  text-decoration: none;
+  margin-bottom: 10px;
+}
+.quicklinks ul li a:hover{
+   color:white;
+}
+.contactus .info li{
+  display: flex;
+  margin-bottom: 16px;
+}
+
+.contactus .info li span:nth-child(1){
+  color:white;
+  font-size: 20px;
+  margin-right: 10px;
+}
+.contactus .info li span{
+  color:rgb(153, 153, 153);
+}
+.contactus .info li a{
+  color:rgb(153, 153, 153);
+  text-decoration: none;
+}
+.contactus .info li a:hover{
+  color: white;
+}
+.message .text{
+  color:white;
+  border-radius: 20px;
+}
+.btn button{
+  color:rgb(1, 20, 46);
+  background:#27ae60;
+  border-radius: 20px;
+}
+.btn button:hover{
+   color:white;
+   cursor: pointer;
+   background:#27ae60;
+   border-radius: 20px;
+}
+
+@media(max-width:768px){
+footer{
+  padding:40px;
+}
+footer .lastcontainer{
+  flex-direction: column;
+}
+footer .lastcontainer .sec{
+  margin-right: 0;
+  margin-bottom: 40px;
+}
+footer .lastcontainer .sec.aboutus,.quicklinks,.contactus{
+  width: 100%;
+}
+.copyrights{
+
+  padding: 8px 40px;
+}
+}
+@media(max-width:360px){
+  footer{
+      padding:10px;
+  }
+  footer .lastcontainer{
+      flex-direction: column;
+  }
+  footer .lastcontainer .sec{
+      margin-right: 0;
+      margin-bottom: 40px;
+  }
+  footer .lastcontainer .sec.aboutus,.quicklinks,.contactus{
+      width: 100%;
+  }
+}

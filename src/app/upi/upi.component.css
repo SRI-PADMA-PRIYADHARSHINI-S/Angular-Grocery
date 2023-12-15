@@ -1,0 +1,58 @@
+
+.UPI{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+.UPIBoxes{
+  box-shadow: 1.5px 0.5px 5px 2px rgba(0,0,0,0.2);
+  margin-left: 100px;
+  margin-bottom: 30px;
+  width: 600px;
+}
+.UPIBoxes img{
+  width: 80px;
+  height: 80px;
+  margin-left: 30px;
+  margin-top: 20px;
+  cursor: pointer;
+}
+.UPIBoxes p{
+  font-size: 1vw;
+  font-weight: lighter;
+  color: gray;
+  margin-left: 130px;
+  margin-top: -60px;
+  margin-bottom: 60px;
+}
+.UPIBoxes h1{
+  font-size: 1vw;
+  margin-left: 30px;
+  margin-bottom: 30px;
+  color: gray;
+  font-weight: lighter;
+}
+.UPILink{
+  display: flex;
+  gap: 20px;
+  border-top: 1px solid gray;
+  width: 500px;
+  margin-left: 30px;
+}
+.UPILinks img{
+  margin-left: 0px;
+  width: 100px;
+}
+
+.UPIBoxes button{
+  width: 500px;
+  height: 50px;
+  font-size: 1.1vw;
+  font-weight: bold;
+  background: #60b246;
+  color: white;
+  border: none;
+  margin-left: 30px;
+  cursor: pointer;
+  margin-bottom: 30px;
+}

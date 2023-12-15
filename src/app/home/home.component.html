@@ -1,0 +1,104 @@
+
+
+<!-- -----------------------------slide show --------------------------------->
+<div class="HomeSlideShow">
+    <img src="{{slideImage}}" alt="image">
+    <div class="HomeSlideContainer">
+     <div *ngFor="let rounds of slideImageUrl; let ind=index" class="HomeSlideRounds" (click)="SlideImages(ind)"></div>
+    </div>
+  </div>
+<!-- ---------------------Child Routing Navbar--------------------------------- -->
+  <div class="HomeNavBar">
+
+  <div class="heading">
+    <span>our Category</span>
+    <h3>Freash and Organic</h3>
+</div>
+     <!-- <h2>{{categoryCount}}&nbsp;&nbsp;Category</h2> -->
+
+  </div>
+  <!-- -------------------child routing components------------------ -->
+<div class="HomeContents">
+  <router-outlet></router-outlet>
+</div>
+
+
+<!-- popular section starts  -->
+
+<section class="popular" id="popular">
+
+  <div class="heading">
+      <span>our product</span>
+      <h3>our top product</h3>
+  </div>
+
+  <div class="box-container">
+
+      <a href="#" class="box">
+          <img src="assets/images/apple.jpg" alt="">
+          <div class="content">
+              <h3>Apple</h3>
+          </div>
+      </a>
+
+      <a href="#" class="box">
+          <img src="assets/images/spinch1.jpeg" alt="">
+          <div class="content">
+              <h3>Spinach</h3>
+          </div>
+      </a>
+
+      <a href="#" class="box">
+          <img src="assets/images/banana.jpg" alt="">
+          <div class="content">
+              <h3>Banana</h3>
+          </div>
+      </a>
+
+      <a href="#" class="box">
+          <img src="assets/images/ginger.jpg" alt="">
+          <div class="content">
+              <h3>Ginger</h3>
+          </div>
+      </a>
+
+      <a href="#" class="box">
+          <img src="assets/images/orange.jpg" alt="">
+          <div class="content">
+              <h3>Orange</h3>
+          </div>
+      </a>
+
+      <a href="#" class="box">
+          <img src="assets/images/lady-finger.jpg" alt="">
+          <div class="content">
+              <h3>Ladies Finger</h3>
+          </div>
+      </a>
+
+      <a href="#" class="box">
+          <img src="assets/images/Cherry.jpg" alt="">
+          <div class="content">
+              <h3>Cherry</h3>
+            </div>
+      </a>
+
+      <a href="#" class="box">
+          <img src="assets/images/Bitter-Gourd.jpg" alt="">
+          <div class="content">
+              <h3>Bitter Gourd</h3>
+
+          </div>
+      </a>
+
+      <a href="#" class="box">
+          <img src="assets/images/Coconut.jpg" alt="">
+          <div class="content">
+              <h3>Coconut</h3>
+          </div>
+      </a>
+
+  </div>
+</section>
+
+<!-- popular section ends -->

@@ -1,0 +1,41 @@
+.terms-container {
+    font-family: 'Open Sans', sans-serif;
+    color: #262626;
+  }
+
+  .terms-title h1{
+    font-size: 28px;
+    font-family: "RobotoCondensed-Bold";
+    text-align: center;
+    font-weight: bold;
+    letter-spacing: 20px;
+  }
+
+  .terms-body h4 {
+    color: #EB573D;
+    font-size: 18px;
+  }
+
+  .terms-body h3{
+    font-family: "RobotoCondensed-Bold";
+    color: #262626;
+    font-weight: bold;
+    text-align: left;
+    margin-bottom: 20px;
+    font-size: 24px;
+  }
+
+  .terms-body p{
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+
+  .terms-body a{
+    color: #EB573D;
+  }
+
+  .terms-body a:hover{
+    color: #EB573D;
+    text-decoration: none;
+  }
+

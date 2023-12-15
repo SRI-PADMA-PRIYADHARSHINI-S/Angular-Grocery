@@ -1,0 +1,61 @@
+
+
+<!-- -----------------------------fontawesome link for the icons--------------------------------->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+<!-- ----------------Display the product------------------- -->
+<div class="outer">
+  <i class="fa-solid fa-heart" (click)="Favorite()" *ngIf="frontUi" [ngStyle]="{'color':favorite}"></i>
+  <i class="fa-solid fa-magnifying-glass" *ngIf="frontUi" (click)="searchBar()"></i>
+
+  <!-- ----------------------Display product details----------------- -->
+  <div class="categoryDetails" *ngIf="frontUi">
+    <h1>{{value.categoryname}}</h1>
+    <h3>{{value.productvariety}}</h3>
+
+    <div class="flex">
+      <div><i class="fa-solid fa-star"></i><h2 class="rating"> {{value.Rating}}</h2></div>
+      <div><h3>5K+ Ratings</h3></div>
+    </div>
+  </div>
+
+
+<div class="inner1" *ngIf="frontUi">
+  <div class="flex1">
+    <!-- <div><i class="fa-solid fa-clock"></i><h2>{{value.timeDel}}&nbsp;MINS</h2></div>
+    <div><div class="round"><i class="fa-solid fa-indian-rupee-sign"></i></div><h1>{{value.Costfortwo}}&nbsp;FOR&nbsp;TWO</h1></div> -->
+  </div>
+</div>
+
+
+</div>
+
+<!-- ---------------------Display the  product---------------------- -->
+<div class="product" *ngIf="frontUi">
+  <div class="products" *ngFor="let products of productArray;let ind=index">
+    <h2>{{products.productName}}</h2>
+    <h4>₹ {{products.productPrice}}</h4>
+    <h5>{{products.productDescription}}</h5>
+    <img src="{{products.productImage}}" alt="juice">
+    <button class="add" (click)="cartItems(ind)" [ngClass]="{'addedButton': indexNumber === ind}" id="{{ind}}">ADD</button>
+  </div>
+</div>
+
+<!-- ------------------Search Bar for the product----------------------- -->
+<div class="searchBar" *ngIf="!frontUi">
+  <form action="" [formGroup]="searchproduct">
+    <input type="text" placeholder="Search in {{value.categoryname}}" formControlName="searchproducts" [(ngModel)]="products">
+    <i class="fa-solid fa-xmark" (click)="closeSearchbar()"></i>
+  </form>
+  <h5 class="error" *ngIf="isfound">No Results Found</h5>
+  <div class="searchproduct" *ngIf="!isfound">
+    <div class="searchproducts" *ngFor="let products of finalProductArray;let ind=index">
+      <h2>{{products.productName}}</h2>
+      <h4>₹ {{products.productPrice}}</h4>
+      <h5>{{products.productDescription}}</h5>
+      <img src="{{products.productImage}}" alt="juice">
+      <button class="add" (click)="searchcartItems(ind)" [ngClass]="{'addedButton': indexNumber === ind}" id="{{ind}}">ADD</button>
+    </div>
+</div>
+</div>
+

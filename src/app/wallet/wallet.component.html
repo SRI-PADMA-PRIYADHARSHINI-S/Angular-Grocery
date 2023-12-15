@@ -1,0 +1,39 @@
+
+
+<!-- -----------------------------Display Wallets--------------------------------->
+<div class="Wallet">
+<div class="WalletBoxes">
+  <img src="./assets/AmazonPay.png" alt="bank">
+  <h1>Amazon Pay</h1>
+  <button>PAY ₹ {{cartTotalPrice}}</button>
+</div>
+<div class="WalletBoxes">
+  <img src="./assets/Paytm.jpg" alt="bank">
+  <h1>Paytm</h1>
+  <p (click)="PaytmWallet()">Linked Account</p>
+  <div class="WalletLink" *ngIf="isPaytmWallet">
+    <p>Proceed to link Paytm wallet with your number:</p>
+    <h1>9360408441</h1>
+
+    <div class="buttons">
+      <button>CANCEL</button>
+      <button>CONTINUE</button>
+    </div>
+  </div>
+</div>
+<div class="WalletBoxes">
+  <img src="./assets/phonePay.png" alt="bank">
+  <h1>PhonePe</h1>
+  <p (click)="PhonePeWallet()">Linked Account</p>
+  <div class="WalletLink" *ngIf="isPhonePeWallet">
+    <p>Proceed to link PhonePe wallet with your number:</p>
+    <h1>9360408441</h1>
+
+    <div class="buttons">
+      <button>CANCEL</button>
+      <button>CONTINUE</button>
+    </div>
+  </div>
+</div>
+</div>
+

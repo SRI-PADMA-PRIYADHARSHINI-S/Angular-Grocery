@@ -1,0 +1,172 @@
+
+
+<!-- -----------------------------DisplayNew Orders --------------------------------->
+
+<div class="gif" *ngIf="isEmpty">
+  <img src="https://images.squarespace-cdn.com/content/v1/62b337f9b09bf141aa5b3a86/2ddbb7b8-2a4c-47c5-b079-58396cccf307/HFR_Donation_Animation_1.gif" alt="image">
+  <h1>Your Orders Are Empty!</h1>
+</div>
+<div class="Orders" *ngIf="isNewOrder">
+  <h1>New Orders</h1>
+
+  <div class="orderBox">
+  <div class="commonBox" *ngFor="let OrderItems of newOrderDetails; let indexNumber=index ">
+<div class="commonBoxes">
+  <div><img src="{{OrderItems.categoryImage}}" alt=""></div>
+  <div>
+    <p>cancel this order within {{OrderItems.deliveryDate[0]}},  {{cancelTime[indexNumber]}}</p>
+    <h2>{{OrderItems.categoryName}}</h2>
+    <h4>Order #{{OrderItems.orderId}} | {{OrderItems.orderedDate[0]}}, {{OrderItems.orderedDate[1]}}</h4>
+    <a (click)="ViewDetails(indexNumber,indexNumber+1)">VIEW DETAILS</a>
+    <h4>Total Price: ₹ {{OrderItems.totalPrice}}</h4>
+  </div>
+</div>
+<div class="commonBoxes" *ngFor="let orderedItems of newOrderDetails[indexNumber].orderedItems;">
+  <p>{{orderedItems.productName}} x {{orderedItems.productQuantity}}</p>
+</div>
+<div class="OrderButton">
+  <div class="button">
+    <button (click)="OrderCancel(indexNumber)">CANCEL</button>
+  </div>
+  <div class="button">
+  <button>Help</button>
+</div>
+</div>
+  </div>
+
+  <button class="LastButton" routerLink="/NewOrders">VIEW MORE NEW ORDERS</button>
+</div>
+</div>
+
+
+
+<!-- -------------------------------------------------------------------Past Order-------------------------------------- -->
+<div class="Orders" *ngIf="isPastOrder">
+  <h1>Past Orders</h1>
+
+  <div class="orderBox">
+  <div class="commonBox" *ngFor="let OrderItems of pastOrderDetails;let indexNumber=index">
+  <div class="commonBoxes">
+  <div><img src="{{OrderItems.categoryImage}}" alt=""></div>
+  <div>
+    <p style="margin-left: 400px;">Yet to be Deliver <i class="fa-solid fa-circle-xmark" style="color: red;"></i></p>
+    <h2>{{OrderItems.categoryName}}</h2>
+    <h4>Order #{{OrderItems.orderId}} | {{OrderItems.orderedDate[0]}}, {{OrderItems.orderedDate[1]}}</h4>
+    <a (click)="ViewDetails(indexNumber,indexNumber+2)">VIEW DETAILS</a>
+    <h4>Total Price: ₹ {{OrderItems.totalPrice}}</h4>
+  </div>
+</div>
+<div class="commonBoxes" *ngFor="let orderedItems of pastOrderDetails[indexNumber].orderedItems;">
+  <p>{{orderedItems.productName}} x {{orderedItems.productQuantity}}</p>
+</div>
+<div class="OrderButton">
+  <div class="button">
+    <button (click)="reOrder(indexNumber,indexNumber+1)">REORDER</button>
+  </div>
+  <div class="button">
+  <button>Help</button>
+ </div>
+</div>
+
+</div>
+<button class="LastButton" routerLink="/PastOrders">VIEW MORE YET TO DELIVER ORDERS</button>
+</div>
+</div>
+
+<!-- ---------------------------------------------------------Delivered Orders------------------------------ -->
+<div class="Orders" *ngIf="isDeliveredOrder">
+  <h1>Delivered Orders</h1>
+
+  <div class="orderBox">
+  <div class="commonBox" *ngFor="let OrderItems of deliveredOrderDetails; let indexNumber=index ">
+<div class="commonBoxes">
+  <div><img src="{{OrderItems.categoryImage}}" alt=""></div>
+  <div>
+    <p>Delivered on {{OrderItems.deliveryDate[0]}},  {{OrderItems.deliveryDate[1]}} <i class="fa-solid fa-circle-check"></i></p>
+    <h2>{{OrderItems.categoryName}}</h2>
+    <h4>Order #{{OrderItems.orderId}} | {{OrderItems.orderedDate[0]}}, {{OrderItems.orderedDate[1]}}</h4>
+    <a (click)="ViewDetails(indexNumber,indexNumber+3)">VIEW DETAILS</a>
+    <h4>Total Price: ₹ {{OrderItems.totalPrice}}</h4>
+  </div>
+</div>
+<div class="commonBoxes" *ngFor="let orderedItems of deliveredOrderDetails[indexNumber].orderedItems;">
+  <p>{{orderedItems.productName}} x {{orderedItems.productQuantity}}</p>
+</div>
+<div class="OrderButton">
+  <div class="button">
+    <button (click)="reOrder(indexNumber,indexNumber+2)">REORDER</button>
+  </div>
+  <div class="button">
+  <button>Help</button>
+</div>
+</div>
+  </div>
+  <button class="LastButton" routerLink="/DeliveredOrders">VIEW MORE DELIVERED ORDERS</button>
+</div>
+</div>
+
+
+
+<div class="viewDetails" *ngIf="isViewDetails">
+
+  <div class="innerviewDetails">
+    <button class="exit" (click)="close()"><i class="fa-solid fa-xmark"></i></button>
+    <p>Order #{{viewDetailsInfo.orderId}}</p>
+
+    <div class="innerItemDetail">
+      <div class="innerItemDetails">
+
+        <div class="innerItemDetails1">
+          <h1><i class="fa-solid fa-truck"></i>&nbsp;&nbsp;{{viewDetailsInfo.categoryName}}</h1>
+        </div>
+        <div class="innerItemDetails1">
+          <h1><i class="fa-solid fa-truck"></i>&nbsp;&nbsp;{{viewDetailsInfo.address.addressType}}</h1>
+          <h2>{{viewDetailsInfo.address.doorNo}}, {{viewDetailsInfo.address.landmark}},{{viewDetailsInfo.address.adress}} <br> {{viewDetailsInfo.address.district}}</h2>
+        </div>
+        <div class="innerItemDetails1" style="margin-bottom: 10px;" *ngIf="isDeliverTime">
+          <h2><i class="fa-solid fa-circle-check" style="color:green"></i>&nbsp;&nbsp;Delivered on {{viewDetailsInfo.deliveryDate[0]}},  {{viewDetailsInfo.deliveryDate[1]}}</h2>
+        </div>
+
+      </div>
+      <div class="innerItemDetails">
+        <h2> {{viewDetailsInfo.orderedItems.length}} ITEM</h2>
+
+        <div class="innerProductDetail">
+          <div class="innerProductDetails">
+            <div class="innerDivProductDetails" *ngFor="let orderProducts of viewDetailsInfo.orderedItems">
+              <div> <p>{{orderProducts.productName}} x {{orderProducts.productQuantity}}</p></div>
+              <div> <h2>₹ {{orderProducts.productPrice}}</h2></div>
+            </div>
+            <div class="innerDivProductDetails">
+              <div> <p>Item Total</p></div>
+              <div> <h2>₹ {{viewDetailsInfo.totalPrice-43}}</h2></div>
+            </div>
+            <div class="innerDivProductDetails" style="margin-bottom: 10px;">
+              <div> <p>Delivery Fee</p></div>
+              <div> <h2>₹ 0</h2></div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+      <div class="innerItemDetails">
+        <div class="paymentType">
+          <div>
+            <p>{{viewDetailsInfo.paymentMenthod}}</p>
+          </div>
+          <div>
+            <h2>Bill Total</h2>
+          </div>
+          <div>
+            <h2>₹ {{viewDetailsInfo.totalPrice}}</h2>
+          </div>
+        </div>
+      </div>
+    </div>
+    <button class="paymentButton" *ngIf="isPaymentButton">PAYMENT</button>
+  </div>
+
+
+
+</div>

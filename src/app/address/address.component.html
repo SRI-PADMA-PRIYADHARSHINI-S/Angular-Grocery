@@ -1,0 +1,74 @@
+
+
+
+ <!-- ------------Display the Registered Address --------------- -->
+
+<div class="Address">
+  <h1>Address</h1>
+
+  <div class="commonBox">
+    <div class="category">
+      <div class="emptyAddress">
+        <div class="addAddress" *ngFor="let adressTypes of AddressDetails">
+          <i class="fa-solid {{this.adressTypes.iconType}}"></i>
+          <p>{{this.adressTypes.addressType}}</p>
+          <div>
+            <p>{{this.adressTypes.doorNo}},&nbsp; {{this.adressTypes.adress}},</p><br>
+            <p>{{this.adressTypes.landmark}},</p><br>
+            <p>{{this.adressTypes.district}}.</p><br>
+          </div>
+        </div>
+        <div class="addAddress">
+          <i class="fa-solid fa-location-dot"></i>
+          <p>ADD NEW ADDRESS</p>
+          <button (click)="showAddress()">ADD NEW</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- ---------------Getting Address From the customer----------------------- -->
+
+<div class="background" *ngIf="isaddAdress">
+  <div class="AddressShow">
+    <button class="exit" (click)="close()"><i class="fa-solid fa-xmark"></i></button>
+    <h1>YOUR ADDRESS</h1>
+
+    <img src="./assets/img9.jpeg" alt="image" class="image">
+
+    <div class="AddressForm">
+      <form [formGroup]="AddressForm">
+        <div class="forms">
+          <label for="PhoneNumber"*ngIf="!AddressForm.controls['yourAddress'].errors?.['required'] && !AddressForm.controls['yourAddress'].errors?.['pattern'] || !AddressForm.controls['yourAddress'].dirty">Address</label>
+          <label *ngIf="AddressForm.controls['yourAddress'].errors?.['required'] && AddressForm.controls['yourAddress'].invalid && AddressForm.controls['yourAddress'].dirty" class="invalid">Please enter Address</label>
+          <label *ngIf="AddressForm.controls['yourAddress'].errors?.['pattern'] && (AddressForm.controls['yourAddress'].invalid || AddressForm.controls['yourAddress'].dirty)" class="invalid">invalid Address</label>
+          <input type="text" placeholder=" " name="Address"  formControlName="yourAddress">
+        </div>
+        <div class="forms">
+          <label for="DoorNo"*ngIf="!AddressForm.controls['DoorNo'].errors?.['required'] && !AddressForm.controls['DoorNo'].errors?.['pattern'] || !AddressForm.controls['DoorNo'].dirty">Door/Flat No.</label>
+          <label *ngIf="AddressForm.controls['DoorNo'].errors?.['required'] && AddressForm.controls['DoorNo'].invalid && AddressForm.controls['DoorNo'].dirty" class="invalid">Please enter Door/Flat No.</label>
+          <label *ngIf="AddressForm.controls['DoorNo'].errors?.['pattern'] && (AddressForm.controls['DoorNo'].invalid || AddressForm.controls['DoorNo'].dirty)" class="invalid">invalid Door/Flat No.</label>
+          <input type="text" placeholder=" " name="DoorNo" formControlName="DoorNo">
+        </div>
+        <div class="forms">
+          <label for="Landmark"*ngIf="!AddressForm.controls['Landmark'].errors?.['required'] && !AddressForm.controls['Landmark'].errors?.['pattern'] || !AddressForm.controls['Landmark'].dirty">Landmark</label>
+          <label *ngIf="AddressForm.controls['Landmark'].errors?.['required'] && AddressForm.controls['Landmark'].invalid && AddressForm.controls['Landmark'].dirty" class="invalid">Please enter Landmark</label>
+          <label *ngIf="AddressForm.controls['Landmark'].errors?.['pattern'] && (AddressForm.controls['Landmark'].invalid || AddressForm.controls['Landmark'].dirty)" class="invalid">invalid Landmark</label>
+          <input type="text" placeholder=" " name="Landmark" formControlName="Landmark">
+        </div>
+        <div class="forms">
+          <label for="District"*ngIf="!AddressForm.controls['District'].errors?.['required'] && !AddressForm.controls['District'].errors?.['pattern'] || !AddressForm.controls['District'].dirty">District</label>
+          <label *ngIf="AddressForm.controls['District'].errors?.['required'] && AddressForm.controls['District'].invalid && AddressForm.controls['District'].dirty" class="invalid">Please enter District</label>
+          <label *ngIf="AddressForm.controls['District'].errors?.['pattern'] && (AddressForm.controls['District'].invalid || AddressForm.controls['District'].dirty)" class="invalid">invalid District</label>
+          <input type="text" placeholder=" " name="District" formControlName="District">
+        </div>
+        <button class="AddressButton" type="submit" [disabled]="!AddressForm.valid" #Home value="Home" (click)="homeAddress(AddressForm.value,Home.value)">SAVE YOUR HOME ADDRESS</button>
+        <button class="AddressButton" type="submit" [disabled]="!AddressForm.valid" #work value="Work" (click)="homeAddress(AddressForm.value,work.value)">SAVE YOUR WORK ADDRESS</button>
+        <button class="AddressButton" type="submit" [disabled]="!AddressForm.valid" #Others value="Others" (click)="homeAddress(AddressForm.value,Others.value)">SAVE YOUR OTHERS ADDRESS</button>
+      </form>
+    </div>
+  </div>
+  </div>
+

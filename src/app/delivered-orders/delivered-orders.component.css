@@ -1,0 +1,294 @@
+
+.Orders{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.commonBox{
+  display:flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  width: 800px;
+  box-shadow: 1.5px 0.5px 5px 2px rgba(0,0,0,0.2);
+  margin-left: 25px;
+}
+
+.orderBox{
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  margin-left: 350px;
+  margin-bottom: 50px;
+}
+
+.commonBoxes{
+  width: 90%;
+  margin-left: 35px;
+}
+
+.commonBoxes:nth-child(1){
+  border-bottom: 0.01vw solid gray;
+  padding: 40px 0px 30px 0px;
+}
+
+.commonBoxes:nth-child(2){
+  flex-direction: column;
+  padding: 20px 0px 30px 0px;
+}
+
+.OrderButton{
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+  margin-top: 20px;
+  margin-left: 30px;
+  margin-bottom: 30px;
+}
+
+.button button{
+  width: 100px;
+  height: 40px;
+  cursor: pointer;
+  border: none;
+}
+
+.button:nth-child(1) button{
+  background-color: #27ae60;
+  color: white;
+  font-weight: bold;
+  font-size: 0.9vw;
+}
+.button:nth-child(2) button{
+  background-color: white;
+  color: #27ae60;
+  border: 1px solid #27ae60;
+  font-weight: bold;
+  font-size: 0.9vw;
+}
+
+
+.Orders h1{
+
+  padding: 20px 0px 10px 30px;
+  font-weight: bold;
+  font-size: 1.8vw;
+  margin-left: 340px;
+}
+.commonBoxes{
+  display: flex;
+  gap:15px;
+}
+.commonBoxes div{
+  margin-top: -20px;
+}
+.commonBoxes img{
+  width: 140px;
+  height: 110px;
+  margin-top: 8px;
+  margin-left: 20px;
+}
+
+.commonBoxes  div h2{
+  font-size: 1.1vw;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+.commonBoxes  div h3{
+  color: gray;
+  font-size: 0.9vw;
+  margin-bottom: 3px;
+  font-weight: lighter;
+}
+.commonBoxes  div h4{
+  color: gray;
+  font-weight: lighter;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  font-size: 0.9vw;
+}
+
+.commonBoxes div a{
+  text-decoration: none;
+  font-size: 1vw;
+  font-weight: bold;
+  color: #27ae60;
+  cursor: pointer;
+}
+
+.commonBoxes div a:hover{
+  color: black;
+}
+
+.commonBoxes:nth-child(1) p{
+  margin-left: 170px;
+  font-size: 1vw;
+  font-weight: lighter;
+  padding-bottom: 0px;
+  color: gray;
+  width: 400px;
+}
+
+.commonBoxes:nth-child(1) i{
+  color: green;
+  margin-left: 10px;
+}
+
+
+
+
+
+
+
+.viewDetails{
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(6, 76, 240, 0.233);
+  z-index: 1;
+}
+.innerviewDetails{
+  height: 100%;
+  width: 37%;
+  background-color: white;
+  position: absolute;
+  right: 0;
+  animation: slide 0.2s linear 1;
+  transition: transform 500ms ease-in-out;
+  transform-origin: right;
+}
+@keyframes slide {
+from{
+  transform: scaleX(0);
+}
+to{
+  transform: scaleX(1);
+}
+}
+.exit{
+  background-color: white;
+  border: none;
+  font-size: 2vw;
+  margin-left: 6%;
+  margin-top: 4%;
+  cursor: pointer;
+}
+.exit:hover{
+  color:#27ae60;
+}
+.innerviewDetails p{
+  margin-left: 70px;
+  margin-top: -30px;
+  font-size: 1.4vw;
+  font-weight: bold;
+  color: black;
+}
+
+.innerItemDetail{
+   display: flex;
+   flex-direction: column;
+   flex-wrap: wrap;
+   gap: 10px;
+   width: 400px;
+   margin-left: 70px;
+   margin-top: 60px;
+}
+
+.innerItemDetails:nth-child(1),.innerItemDetails:nth-child(2){
+  border-bottom: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.innerItemDetails h1{
+  font-size: 1.1vw;
+  margin-left: -30px;
+}
+.innerItemDetails h2{
+  font-size: 0.9vw;
+  color: gray;
+  font-weight: lighter;
+  margin-top: 3px;
+  line-height: 20px;
+}
+
+.innerDivProductDetails p{
+  margin-left: 0px;
+  margin-top: 0px;
+  font-size: 1vw;
+  font-weight: lighter;
+  color: black;
+}
+.innerDivProductDetails h2{
+  margin-left: 0px;
+  margin-top: 0px;
+  font-size: 1vw;
+  font-weight: lighter;
+  color: gray;
+}
+
+.innerDivProductDetails{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.innerDivProductDetails:nth-child(1){
+  margin-bottom: 20px;
+}
+
+
+.paymentType{
+  display: flex;
+  justify-content: space-between;
+}
+
+.paymentType p{
+  margin-left: 0px;
+  margin-top: 0px;
+  font-size: 1vw;
+  font-weight: lighter;
+  color: gray;
+}
+
+.paymentType h2{
+  font-weight: bold;
+  color:black;
+  font-size: 1vw;
+}
+
+.fa-circle-check{
+  font-size: 1.1vw;
+  font-weight: bold;
+  color: green;
+  margin-left: -30px;
+}
+
+
+.paymentButton{
+  width: 400px;
+  height: 40px;
+  margin-top: 40px;
+  margin-left: 70px;
+  border: none;
+  font-size: 1.1vw;
+  font-weight: bold;
+  color: white;
+  background: #60b246;
+  cursor: pointer;
+}
+
+.gif img{
+  width: 650px;
+  margin-left: 450px;
+  margin-top: 40px;
+}
+.gif h1{
+  margin-left: 600px;
+  font-size: 2vw;
+}

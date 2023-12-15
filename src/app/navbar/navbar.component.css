@@ -1,0 +1,125 @@
+*{
+  margin: 0;
+  padding: 0;
+  font-family:sans-serif;
+}
+.NavBarHeader{
+  display: flex;
+  background-color: white;
+  height: 14vh;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1%;
+  box-shadow: 1.5px 0.5px 5px 2px rgba(0,0,0,0.2);
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+
+.NavBarLogo img{
+  height: 10vh;
+  width: 80%;
+  margin-left: 120%;
+  margin-top: 5%;
+}
+/* .NavBarLogo .h4{
+  margin-left: 180%;
+  color:#130f40;
+  text-decoration: none;
+  font-size: 2em;
+  font-weight: 750;
+  letter-spacing: 0.1em;
+} */
+.NavBarNav{
+  display: flex;
+  margin-left: -100%;
+  gap: 10%;
+  position: relative;
+}
+.NavBarNav li{
+ display: inline;
+ font-size: 1.3vw;
+ cursor: pointer;
+}
+.NavBarNav a{
+  text-decoration: none;
+  color: #130f40;
+  font-size: 0.5cm;
+  font-size: 1.3vw;
+  font-weight: medium;
+}
+.NavBarNav a i{
+  font-size: 1vw;
+}
+.NavBarNav li:hover{
+  color:#27ae60;
+}
+.NavBarNav a:hover{
+  color:#27ae60;
+}
+.ActiveLink{
+  color:#27ae60;
+}
+/*-------------------------------------------------*/
+/*  */
+/*-----------------------------------*/
+
+.invalid{
+  color: red;
+}
+
+.NavBarcart{
+  display: flex;
+  width: 120%;
+}
+
+.circle{
+  width: 100%;
+  height: 4vh;
+  margin-right: 2%;
+  border-radius: 50%;
+  border: 1px solid black;
+}
+
+.cartCountfalse{
+  margin-left: 25%;
+  margin-top: 30%;
+  font-size: 1vw;
+}
+
+.cartCountTrue{
+  margin-left: 25%;
+  margin-top: 30%;
+  color: white;
+  font-size: 1vw;
+}
+
+.colored{
+  width: 100%;
+  height: 4vh;
+  margin-right: 2%;
+  border-radius: 50%;
+  background-color: #27ae60;
+}
+
+.NavBarLogout{
+  width: 20%;
+  height: 10vh;
+  position: absolute;
+  left: 57%;
+  top: 110%;
+  border-top: 2px solid #27ae60;
+  visibility: hidden;
+  background-color: white;
+  cursor: pointer;
+}
+
+
+.NavBarUser:hover .NavBarLogout{
+  visibility: visible;
+}
+.NavBarProfile{
+  margin-left: 20%;
+}

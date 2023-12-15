@@ -1,0 +1,168 @@
+
+
+
+<!-- --------------font awesome link for the icons-------------- -->
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+<body>
+  <!-- -----------------------Cart Empty ------------------------ -->
+
+<div class="outer" *ngIf="iscartAdded">
+  <img src="https://thumbs.gfycat.com/LeftCreepyHorsechestnutleafminer-max-1mb.gif" alt="cart">
+  <h3>Your cart is empty</h3>
+  <h4>You can go to home page</h4>
+
+  <button (click)="home()">GO TO HOMEPAGE</button>
+</div>
+
+<!-- ------------------Details of Cart-------------------- -->
+<div class="outer1" *ngIf="!iscartAdded">
+<div class="first">
+
+  <!-- -------------------Login Details------------------------- -->
+  <div class="firsts">
+    <h2>Account</h2>
+    <p *ngIf="iserror">To place your order now, log in to your existing account or sign up.</p>
+    <img src="./assets/img9.jpeg" alt="logo">
+    <h1 class="error" *ngIf="iserror">PLEASE LOGIN OR SIGNUP YOUR ACCOUNT</h1>
+    <h1 class="error" *ngIf="islogged">THE USERNAME IS <span>{{user}}</span></h1>
+  </div>
+
+  <!-- --------------Address Details-------------------------- -->
+  <div class="firsts">
+    <h1 *ngIf="!isShowAddress">DELIVERY ADDRESS</h1>
+    <h1 *ngIf="isShowAddress" style="color:black">SELECT YOUR ADDRESS</h1>
+    <div class="showAddress">
+      <div class="emptyAddress" *ngIf="isShowAddress">
+        <div class="addAddress" *ngFor="let adressTypes of AddressDetails; let ind=index">
+          <i class="fa-solid {{this.adressTypes.iconType}}"></i>
+          <p>{{this.adressTypes.addressType}}</p>
+          <div>
+            <p>{{this.adressTypes.doorNo}},&nbsp; {{this.adressTypes.adress}},</p><br>
+            <p>{{this.adressTypes.landmark}},</p><br>
+            <p>{{this.adressTypes.district}}.</p><br>
+          </div>
+          <button class="deliveryButton" (click)="setAddress(ind)" *ngIf="!isAddress">DELIVERY HERE</button>
+          <button class="deliveryButton" (click)="setAddress(ind)" *ngIf="isAddress">CHANGE</button>
+        </div>
+        <div class="addAddress">
+          <i class="fa-solid fa-location-dot"></i>
+          <p>ADD NEW ADDRESS</p>
+          <button (click)="addAdress()">ADD NEW</button>
+        </div>
+      </div>
+    </div>
+
+
+  </div>
+
+  <!-- ---------------------Payment Details---------------- -->
+  <div class="firsts">
+    <h1>PAYMENT</h1>
+    <button class="paymentButton" (click)="Payment()">Pay &nbsp;₹ {{totalPrice}}</button>
+  </div>
+</div>
+
+
+
+<!-- -----------------Display the added Food items------------------ -->
+<div class="second">
+
+  <!-- --------------------Display the items------------------------ -->
+  <div class="seconds">
+    <!-- <img src="{{categoryDetailsShow.categoryimage}}" alt="categoryimage">
+    <h2 (click)="categoryRoute()">{{categoryDetailsShow.categoryname}}</h2>
+    <h4>Category</h4> -->
+
+    <div class="item">
+
+      <div class="items" *ngFor="let items of itemsArray; let ind=index">
+        <div class="names"><p>{{items.productName}}</p></div>
+        <div class="names">
+
+            <div class="itemvalidates"><button (click)="minus(ind)">-</button></div>
+            <div class="itemvalidates"><h5 id="count">{{items.productQuantity}}</h5></div>
+            <div class="itemvalidates"><button (click)="plus(ind)">+</button></div>
+
+        </div>
+        <div class="names"><h4>₹{{items.productPrice}}</h4></div>
+
+      </div>
+
+      <div class="billing">
+      <h6>Bill Details</h6>
+      <hr>
+      <h2>item Total</h2>
+      <h2>Delivery Partner Fee</h2>
+
+      <h2 class="itemfee">₹{{itemTotal}}</h2>
+      <h2 class="deliverfee">₹0</h2>
+      <hr>
+
+      <h3>To Pay</h3>
+      <h2 class="totalfee">₹{{totalPrice}}</h2>
+    </div>
+
+    </div>
+
+  </div>
+  <div class="seconds">
+    <div class="des">
+      <h3>Review your order and address details to avoid cancellations</h3>
+
+      <h3><span>Note:</span> If you cancel within 60 seconds of placing your order, a 100% refund will be issued. No refund for cancellations made after 60 seconds.</h3>
+    </div>
+  </div>
+</div>
+</div>
+
+
+
+
+<div class="background" *ngIf="isaddAdress">
+  <div class="Address">
+    <button class="exit" (click)="close()"><i class="fa-solid fa-xmark"></i></button>
+    <h1>YOUR ADDRESS</h1>
+
+    <img src="./assets/img9.jpeg" alt="image" class="image">
+
+
+    <!-- ---------------------Address Form------------------------- -->
+
+    <div class="AddressForm">
+      <form [formGroup]="Address">
+        <div class="forms">
+          <label for="PhoneNumber"*ngIf="!Address.controls['yourAddress'].errors?.['required'] && !Address.controls['yourAddress'].errors?.['pattern'] || !Address.controls['yourAddress'].dirty">Address</label>
+          <label *ngIf="Address.controls['yourAddress'].errors?.['required'] && Address.controls['yourAddress'].invalid && Address.controls['yourAddress'].dirty" class="invalid">Please enter Address</label>
+          <label *ngIf="Address.controls['yourAddress'].errors?.['pattern'] && (Address.controls['yourAddress'].invalid || Address.controls['yourAddress'].dirty)" class="invalid">invalid Address</label>
+          <input type="text" placeholder=" " name="Address"  formControlName="yourAddress">
+        </div>
+        <div class="forms">
+          <label for="DoorNo"*ngIf="!Address.controls['DoorNo'].errors?.['required'] && !Address.controls['DoorNo'].errors?.['pattern'] || !Address.controls['DoorNo'].dirty">Door/Flat No.</label>
+          <label *ngIf="Address.controls['DoorNo'].errors?.['required'] && Address.controls['DoorNo'].invalid && Address.controls['DoorNo'].dirty" class="invalid">Please enter Door/Flat No.</label>
+          <label *ngIf="Address.controls['DoorNo'].errors?.['pattern'] && (Address.controls['DoorNo'].invalid || Address.controls['DoorNo'].dirty)" class="invalid">invalid Door/Flat No.</label>
+          <input type="text" placeholder=" " name="DoorNo" formControlName="DoorNo">
+        </div>
+        <div class="forms">
+          <label for="Landmark"*ngIf="!Address.controls['Landmark'].errors?.['required'] && !Address.controls['Landmark'].errors?.['pattern'] || !Address.controls['Landmark'].dirty">Landmark</label>
+          <label *ngIf="Address.controls['Landmark'].errors?.['required'] && Address.controls['Landmark'].invalid && Address.controls['Landmark'].dirty" class="invalid">Please enter Landmark</label>
+          <label *ngIf="Address.controls['Landmark'].errors?.['pattern'] && (Address.controls['Landmark'].invalid || Address.controls['Landmark'].dirty)" class="invalid">invalid Landmark</label>
+          <input type="text" placeholder=" " name="Landmark" formControlName="Landmark">
+        </div>
+        <div class="forms">
+          <label for="District"*ngIf="!Address.controls['District'].errors?.['required'] && !Address.controls['District'].errors?.['pattern'] || !Address.controls['District'].dirty">District</label>
+          <label *ngIf="Address.controls['District'].errors?.['required'] && Address.controls['District'].invalid && Address.controls['District'].dirty" class="invalid">Please enter District</label>
+          <label *ngIf="Address.controls['District'].errors?.['pattern'] && (Address.controls['District'].invalid || Address.controls['District'].dirty)" class="invalid">invalid District</label>
+          <input type="text" placeholder=" " name="District" formControlName="District">
+        </div>
+        <button class="AddressButton" type="submit" [disabled]="!Address.valid" #Home value="Home" (click)="homeAddress(Address.value,Home.value)">SAVE YOUR HOME ADDRESS</button>
+        <button class="AddressButton" type="submit" [disabled]="!Address.valid" #work value="Work" (click)="homeAddress(Address.value,work.value)">SAVE YOUR WORK ADDRESS</button>
+        <button class="AddressButton" type="submit" [disabled]="!Address.valid" #Others value="Others" (click)="homeAddress(Address.value,Others.value)">SAVE YOUR OTHERS ADDRESS</button>
+      </form>
+    </div>
+  </div>
+  </div>
+
+
+</body>

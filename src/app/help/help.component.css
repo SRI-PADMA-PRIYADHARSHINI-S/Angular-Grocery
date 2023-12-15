@@ -1,0 +1,74 @@
+
+.outer{
+  background-color: #359c57;
+  width: 100%;
+  padding-bottom: 50px;
+}
+.Heading{
+  border: 2px solid #359c57;
+  margin-left: 10%;
+}
+
+.Heading h1{
+  color:white;
+  margin-top: 5%;
+  font-size: 2vw;
+}
+.Heading h2{
+  color: white;
+  margin-top: 0.5%;
+  font-size: 1vw;
+  font-weight: lighter;
+}
+
+.HelpBox{
+  margin-left: 10%;
+  background-color: white;
+  width: 70%;
+  margin-top: 1%;
+  padding: 4%;
+}
+
+.left{
+  margin-top: 10%;
+  margin-left: 4%;
+  /* padding: 10px 0px 10px 10px; */
+  padding-top: 30px;
+  padding-bottom: 30px;
+  /* height: 8vh; */
+}
+
+.content{
+  display: flex;
+}
+
+.content .boxes:nth-child(1){
+  background-color: #edf1f7;
+  width: 25%;
+  /* height: 80vh; */
+}
+
+.left a{
+  margin-left: 25%;
+  font-size: 1vw;
+  font-weight: bold;
+  color: gray;
+  cursor: pointer;
+  text-decoration: none;
+ }
+
+ .left a:hover{
+  font-weight: bold;
+  color: black;
+ }
+
+ .boxes{
+  padding-bottom: 40px;
+ }
+
+ .boxes:nth-child(2){
+  margin-left: 2%;
+}
+
+
+

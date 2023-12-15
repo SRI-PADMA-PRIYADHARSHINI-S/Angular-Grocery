@@ -1,0 +1,100 @@
+
+*{
+  font-family: sans-serif;
+}
+.cateegory{
+  display: flex;
+  flex-wrap: wrap;
+  width: 90%;
+  margin-left: 6%;
+  gap: 2%;
+}
+.categorys{
+   cursor: pointer;
+   width: 23%;
+   margin-top: 2%;
+}
+h4{
+  font-weight: bold;
+  margin-left: 4%;
+  margin-top: -3%;
+  font-size: 1vw;
+}
+h5{
+  font-weight: lighter;
+  color: gray;
+  font-size: 0.8vw;
+  margin-left: 4%;
+  margin-top: 2%;
+}
+.categorys img{
+  width: 90%;
+  height:170px;
+  margin: 5%;
+}
+.offer{
+  display: flex;
+  border-bottom: 1px solid gray;
+  width: 88%;
+  gap: 30px;
+  align-items: center;
+  margin: 4%;
+}
+.offer div{
+  width: 60px;
+  height: 30px;
+}
+.rating{
+  background-color: rgb(17, 202, 17);
+  color: white;
+  font-size: 1.2vw;
+  font-weight: bold;
+  margin: 2%;
+}
+.time h5{
+margin-top: 10%;
+}
+.rate h5{
+  margin-top: 10%;
+}
+.offer_1{
+  margin-left: 4%;
+  width: 88%;
+  height: 4vh;
+  border-bottom: 1px solid gray;
+}
+.offer_1 i{
+  margin-left: 2%;
+  color: rgb(191, 28, 28);
+}
+.offer_1 h4{
+  margin-left: 10%;
+  margin-top: -7%;
+  width: 70%;
+  font-weight: lighter;
+  color: rgb(191, 28, 28);
+}
+.view{
+  text-align: center;
+  margin-top: 5%;
+  font-size: 0.8vw;
+  height: 5vh;
+  font-weight: medium;
+  width: 90%;
+  color: rgb(0, 166, 255);
+  visibility: hidden;
+  cursor: pointer;
+}
+
+.categorys:hover{
+  border: 1px solid gray;
+  box-shadow: 0.5px 0.5px 2.5px 0.5px rgba(0, 0,0,1);
+}
+.categorys:hover .view{
+  visibility: visible;
+}
+.rating i{
+  margin-top: 12%;
+  margin-left: 5%;
+  color: white;
+}

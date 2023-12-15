@@ -1,0 +1,83 @@
+.Wallets{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+.WalletBoxes{
+  box-shadow: 1.5px 0.5px 5px 2px rgba(0,0,0,0.2);
+  margin-left: 100px;
+  margin-bottom: 30px;
+  width: 600px;
+  /* height: 250px; */
+}
+.WalletBoxes img{
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  margin-left: 30px;
+  margin-top: 20px;
+}
+.WalletBoxes h1{
+  font-size: 1.3vw;
+  font-weight: lighter;
+  color: black;
+  margin: 30px;
+}
+.WalletBoxes button{
+  margin-left: 30px;
+  margin-bottom: 40px;
+  height: 40px;
+  width: 200px;
+  background: #60b246;
+  color: white;
+  font-weight: bold;
+  font-size: 1.1vw;
+  cursor: pointer;
+  border: none;
+}
+.WalletBoxes p{
+  margin-left: 30px;
+  padding-bottom: 30px;
+  cursor: pointer;
+  color: rgb(255, 128, 0);
+  font-size: 1.1vw;
+  font-weight: medium;
+}
+.WalletBoxes p:hover{
+  color: black;
+}
+.WalletLink{
+  border-top: 1px dotted gray;
+  width: 500px;
+  margin-left: 30px;
+  margin-top: 10px;
+}
+.WalletLink p{
+  color: rgb(179, 179, 179);
+  margin-top: 20px;
+  margin-left: 0px;
+  font-weight: lighter;
+}
+.WalletLink h1{
+  font-size: 1.4vw;
+  margin-left: 0px;
+  margin-top: 15px;
+}
+.WalletLink .buttons{
+  display: flex;
+  gap: 20px;
+}
+
+.buttons button{
+  width: 120px;
+  height: 40px;
+  font-size: 1vw;
+}
+
+.buttons button:nth-child(1){
+  background: white;
+  color: #60b246;
+  cursor: pointer;
+  border: 1px solid #60b246;
+  margin-left: 0px;
+}

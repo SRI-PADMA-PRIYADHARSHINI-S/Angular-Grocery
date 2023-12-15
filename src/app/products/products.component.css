@@ -1,0 +1,298 @@
+*{
+  font-family: sans-serif;
+}
+.outer{
+  width: 40%;
+  margin-left: 27%;
+  margin-top: 3%;
+}
+.outer .fa-heart{
+  font-size: 1.6vw;
+  padding-bottom: 40px;
+  margin-left: 85%;
+  cursor: pointer;
+}
+
+.outer .fa-magnifying-glass{
+margin-left: 30px;
+font-size: 1.6vw;
+cursor:pointer;
+}
+
+.productDetails{
+  border-bottom: 1px dotted gray;
+  width: 100%;
+}
+h1{
+font-size: 1.5vw;
+font-weight: medium;
+}
+h3{
+  margin-top: 0.5%;
+  font-weight: lighter;
+  color: gray;
+  font-size: 0.8vw;
+}
+.flex{
+  display: flex;
+  flex-direction: column;
+  height: 8vh;
+  width: 10%;
+  margin-left: 90%;
+  margin-top: -8%;
+  margin-bottom: 3%;
+}
+.flex div{
+  border: 0.1px solid rgb(188, 187, 187);
+  height: 50%;
+}
+.flex div h3{
+  font-size: 0.6vw;
+  font-weight: bold;
+  margin-top: 16%;
+  margin-left: 5%;
+}
+.flex div i{
+  font-size: 0.8vw;
+  font-weight: bold;
+  margin-top: 13%;
+  margin-left: 13%;
+  color: green;
+}
+.rating{
+  color: green;
+  font-size: 1vw;
+  margin-left: 45%;
+  margin-top: -25%;
+}
+.fa-clock{
+  font-size: 1.4vw;
+}
+.flex1{
+  margin-top: 2%;
+  display: flex;
+  gap: 7%;
+  margin-bottom: 4%;
+}
+.flex1 h2{
+  font-size: 1.3vw;
+  margin-left: 40%;
+  margin-top: -29%;
+}
+.flex1 h1{
+  font-size: 1.3vw;
+  margin-left: 25%;
+  margin-top: -15.5%;
+}
+.fa-indian-rupee-sign{
+margin-left: 25%;
+font-size: 0.9vw;
+}
+
+.round{
+width: 15%;
+height: 3vh;
+border: 2px solid black;
+border-radius: 50%;
+}
+
+
+.veg{
+  font-size: 1vw;
+  font-weight: bold;
+  color: black;
+}
+
+
+input{
+  margin-top: -220%;
+}
+input:checked + .rectangle{
+  background-color: green;
+}
+.product{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 10%;
+  width: 140%;
+  margin-left: 27%;
+  margin-top: 3%;
+}
+
+.products{
+  /* border-bottom: 1px solid rgb(180, 180, 180); */
+  position: relative;
+}
+
+.products h2{
+  font-size: 1vw;
+  margin-top: 8%;
+  margin-left: 4%;
+}
+.products h4{
+  font-size: 1vw;
+  margin-top: 1%;
+  margin-left: 4%;
+  font-weight: lighter;
+}
+
+.products img{
+  width: 150%;
+  height: 24vh;
+  margin-left: 80%;
+  margin-top: -14%;
+  border-radius: 10px;
+  margin-bottom: 4%;
+}
+.add{
+  width: 35%;
+  height: 5vh;
+  position: absolute;
+  left: 82.5%;
+  top: 70%;
+  background-color: white;
+  color: green;
+  font-size: 0.8vw;
+  font-weight: bold;
+  cursor: pointer;
+  border: 1px solid rgb(184, 184, 184);
+  border-radius: 5px;
+}
+
+
+.products h5{
+  font-size: 1vw;
+  margin-top: 4%;
+  margin-left: 4%;
+  font-weight: lighter;
+  color: gray;
+}
+.cart{
+  width: 15%;
+  height: 5vh;
+  position: absolute;
+  left: 82.5%;
+  top: 70%;
+  background-color: white;
+  color: green;
+  font-size: 0.8vw;
+  font-weight: bold;
+  cursor: pointer;
+  border: 1px solid rgb(184, 184, 184);
+  border-radius: 5px;
+}
+.minus{
+  height: 100%;
+  font-size: 2vw;
+  width: 40%;
+  cursor: pointer;
+  background-color: white;
+  color: green;
+  border: none;
+  border-radius: 5px;
+}
+.plus{
+  height: 80%;
+  font-size: 1.5vw;
+  margin-left: 20%;
+  width: 40%;
+  cursor: pointer;
+  background-color: white;
+  color: green;
+  border: none;
+  border-radius: 5px;
+}
+.count{
+  position: absolute;
+  width: 20%;
+  font-size: 1.2vw;
+  left: 44%;
+  top:18%;
+  color: green;
+  font-weight: bold;
+}
+
+.addedButton{
+  background-color: rgb(3, 217, 3);
+  color: white;
+}
+
+.searchBar{
+  /* border: 2px solid black; */
+  margin-left: 400px;
+  /* width: 800px; */
+  margin-right: 400px;
+  margin-bottom: 50px;
+  padding-bottom: 500px;
+}
+
+.searchBar input{
+    border: 0.5px solid rgb(220, 211, 211);
+    width: 85%;
+    height: 6vh;
+    font-size: 1.1vw;
+    margin-left: 15px;
+    margin-top: 40px;
+    font-weight: light;
+    padding-left: 20px;
+    border-radius: 30px;
+    outline: none;
+}
+.fa-xmark{
+  margin-left: 30px;
+  padding-top: 20px;
+  font-size: 1.8vw;
+  cursor: pointer;
+  color: gray;
+}
+.searchproduct {
+  display: flex;
+  flex-direction: column;
+  gap: 2%;
+  width: 90%;
+  margin-left: 20px;
+  margin-top: 3%;
+}
+
+.searchproducts{
+  border-bottom: 1px solid rgb(180, 180, 180);
+  position: relative;
+}
+
+.searchproducts h2{
+  font-size: 1vw;
+  margin-top: 8%;
+  margin-left: 4%;
+}
+.searchproducts h4{
+  font-size: 1vw;
+  margin-top: 1%;
+  margin-left: 4%;
+  font-weight: lighter;
+}
+
+.searchproducts img{
+  width: 20%;
+  height: 14vh;
+  margin-left: 80%;
+  margin-top: -14%;
+  border-radius: 10px;
+  margin-bottom: 4%;
+}
+
+.searchproducts h5{
+  font-size: 1vw;
+  margin-top: 4%;
+  margin-left: 4%;
+  font-weight: lighter;
+  color: gray;
+}
+
+
+.error{
+  font-size: 1vw;
+  font-weight: lighter;
+  margin-left: 20px;
+  margin-top: 10px;
+}

@@ -1,0 +1,26 @@
+
+ <!-- -----------------display favorite category----------------------- -->
+<div class="Favorites">
+  <h1>Favorites</h1>
+<!-- ------------------display the favorite category details------------- -->
+  <div class="commonBox" *ngIf="isshow">
+    <div class="category">
+      <div class="categorys" *ngFor="let FavoriteArrays of limitedFavorite; let ind=index" (click)="sendCategory(ind)">
+        <img src="{{FavoriteArrays.categoryimage}}" alt="">
+        <h4>{{FavoriteArrays.categoryname}}</h4>
+        <h5>{{FavoriteArrays.productvariety}}</h5>
+        <div class="offer">
+          <div class="rating"><i class="fa-solid fa-star"></i> {{FavoriteArrays.Rating}}</div>
+          <!-- <div class="time"><h5>{{FavoriteArrays.timeDel}}&nbsp;MINS</h5></div>
+          <div class="rate"><h5>{{FavoriteArrays.Costfortwo}}&nbsp;FOR&nbsp;TWO</h5></div> -->
+        </div>
+        <div class="offer_1" *ngIf="FavoriteArrays.offer.length>=1">
+          <i class="fa-solid fa-percent"></i>
+          <h4>{{FavoriteArrays.offer}}</h4>
+        </div>
+        <h4 class="view">QUICK VIEW</h4>
+      </div>
+    </div>
+    <button (click)="FavoritePage()" *ngIf="isButton">VIEW MORE FAVORITES</button>
+  </div>
+</div>
