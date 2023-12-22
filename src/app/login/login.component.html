@@ -1,5 +1,12 @@
 
+
 <!-- -----------------------------Display Login Form --------------------------------->
+<div class="HomeSlideShow">
+  <img src="{{slideImage}}" alt="image">
+  <div class="HomeSlideContainer">
+   <div *ngFor="let rounds of slideImageUrl; let ind=index" class="HomeSlideRounds" (click)="SlideImages(ind)"></div>
+  </div>
+</div>
 <div class="background">
   <div class="signin" *ngIf="signInPage">
     <button class="exit" (click)="Close()"><i class="fa-solid fa-xmark"></i></button>
@@ -19,17 +26,19 @@
           <label for="Password"*ngIf="!login.controls['loginPassword'].errors?.['required'] && !login.controls['loginPassword'].errors?.['pattern'] || !login.controls['loginPassword'].dirty">Password</label>
           <label *ngIf="login.controls['loginPassword'].errors?.['required'] && login.controls['loginPassword'].invalid && login.controls['loginPassword'].dirty" class="invalid">Please enter Password</label>
           <label *ngIf="login.controls['loginPassword'].errors?.['pattern'] && (login.controls['loginPassword'].invalid || login.controls['loginPassword'].dirty)" class="invalid">invalid Password</label>
-          <input type="password" placeholder=" " name="Password" formControlName="loginPassword">
+          <input [type]="passType" placeholder=" " name="Password" formControlName="loginPassword">
+          <i class="fa-regular fa-eye pass-eye" *ngIf="!eyeIcon" (click)="showPassword()"></i>
+          <i class="fa-regular fa-eye-slash pass-eye" *ngIf="eyeIcon" (click)="showPassword()"></i>
         </div>
         <button class="Fpassword" (click)="ForgotPassPage()">forgot Password?</button><br>
         <button class="login" type="submit" [disabled]="!login.valid" (click)="SendData()">LOGIN</button>
       </form>
-     </div>
+    </div>
   </div>
 <!-- -----------------------------Display ForgotPassword Form --------------------------------->
   <div class="signin" *ngIf="forgotPasswordPage">
     <button class="exit" (click)="Close()"><i class="fa-solid fa-xmark"></i></button>
-    <h1>Forgort Password</h1>
+    <h1>Forgot Password</h1>
     <button class="createAccount" (click)="SignIn()"><span>or</span>Login to Your Account</button>
     <img src="./assets/img9.jpeg" alt="image" class="image">
 
@@ -42,10 +51,12 @@
           <input type="text" placeholder=" " name="Email"  formControlName="forgotPhone">
         </div>
         <div class="forms">
-          <label for="forgotPass"*ngIf="!forgotPassword.controls['forgotPass'].errors?.['forgotPass'] && !forgotPassword.controls['forgotPass'].errors?.['pattern'] || !forgotPassword.controls['forgotPass'].dirty">Password</label>
+          <label for="forgotPass" *ngIf="!forgotPassword.controls['forgotPass'].errors?.['required'] && !forgotPassword.controls['forgotPass'].errors?.['pattern'] || !forgotPassword.controls['forgotPass'].dirty">Password</label>
           <label *ngIf="forgotPassword.controls['forgotPass'].errors?.['required'] && forgotPassword.controls['forgotPass'].invalid && forgotPassword.controls['forgotPass'].dirty" class="invalid">Please enter Password</label>
           <label *ngIf="forgotPassword.controls['forgotPass'].errors?.['pattern'] && (forgotPassword.controls['forgotPass'].invalid || forgotPassword.controls['forgotPass'].dirty)" class="invalid">invalid Password</label>
-          <input type="password" placeholder=" " name="forgotPassword" formControlName="forgotPass" [(ngModel)]="ForgotpasswordCheck">
+          <input [type]="passType" placeholder=" " name="forgotPassword" formControlName="forgotPass" [(ngModel)]="ForgotpasswordCheck">
+          <i class="fa-regular fa-eye pass-eye" *ngIf="!eyeIcon" (click)="showPassword()"></i>
+          <i class="fa-regular fa-eye-slash pass-eye" *ngIf="eyeIcon" (click)="showPassword()"></i>
         </div>
         <div class="forms">
           <label for="forgotConfirm" *ngIf="ForgotPasswordChecker()">Confirm Password</label>
@@ -89,7 +100,9 @@
                 <label *ngIf="register.controls['password'].errors?.['required'] && register.controls['password'].invalid && register.controls['password'].dirty" class="invalid">Please enter password</label>
                 <label *ngIf="register.controls['password'].errors?.['pattern'] && (register.controls['password'].invalid || register.controls['password'].dirty)" class="invalid">use 8 digits one caps,small & special char</label>
 
-              <input type="password" placeholder=" " name="Password" formControlName="password" [(ngModel)]="passwordCheck">
+              <input [type]="passType" placeholder=" " name="Password" formControlName="password" [(ngModel)]="passwordCheck">
+              <i class="fa-regular fa-eye pass-eye" *ngIf="!eyeIcon" (click)="showPassword()"></i>
+              <i class="fa-regular fa-eye-slash pass-eye" *ngIf="eyeIcon" (click)="showPassword()"></i>
             </div>
             <div class="forms">
               <label for="ConfirmPassword" *ngIf="PasswordChecker()">Confirm Password</label>
@@ -98,7 +111,6 @@
             </div>
             <button class="login" type="submit" [disabled]="!register.valid && isPasswordChecked" (click)="SaveData()">REGISTER</button>
           </form>
-
         </div>
       </div>
     </div>

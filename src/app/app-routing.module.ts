@@ -37,6 +37,9 @@ import { UPIComponent } from './upi/upi.component';
 import { WalletComponent } from './wallet/wallet.component';
 import { ContactComponent } from './contact/contact.component';
 import { ProductsComponent } from './products/products.component';
+import { AdminboardComponent } from './adminboard/adminboard.component';
+import { AdminComponent } from './admin/admin.component';
+import { AdminCustomerDetailsComponent } from './admin-customer-details/admin-customer-details.component';
 const routes: Routes = [
   {path:' ',
   redirectTo:'/home',
@@ -140,7 +143,8 @@ const routes: Routes = [
     path:"Payment",
     component:UPIComponent
   }
-]
+],
+canActivate: [LoginGuardGuard]
 },
 {
   path:"Terms",
@@ -207,7 +211,27 @@ const routes: Routes = [
 {
   path:"FeedBack",
   component:OrderFeedbackComponent
-}
+},
+{
+    path:"admin",
+    component:AdminboardComponent,
+    children:[
+      {
+        path:'',
+        redirectTo:'admin',
+        pathMatch: 'full'
+      },
+      {
+        path:"admin",
+        component:AdminComponent
+      },
+      {
+        path:"admincustomerdetails",
+        component:AdminCustomerDetailsComponent
+      }
+  ]
+},
+
 ];
 
 @NgModule({

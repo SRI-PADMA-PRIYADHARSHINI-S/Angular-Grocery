@@ -977,14 +977,14 @@
           "productName": "Watermelo",
           "productPrice": "40 /kg",
           "productType": "veg",
-          "productDescription": "Healthy Juice"
+          "productDescription": ""
         },
         {
           "productImage": "./assets/images/dragonfruit.jpg",
           "productName": "Deagronfurit",
           "productPrice": "60 /kg",
           "productType": "veg",
-          "productDescription": "Healthy Juice"
+          "productDescription": ""
         },
         {
           "productImage": "./assets/images/blueberry.jpg",
@@ -1005,42 +1005,42 @@
           "productName": "Cherry",
           "productPrice": "120 /kg",
           "productType": "veg",
-          "productDescription": "Serves 1"
+          "productDescription": ""
         },
         {
           "productImage": "./assets/images/Jackfruit.jpg",
           "productName": "Jackfruit",
           "productPrice": "89 /kg",
           "productType": "veg",
-          "productDescription": "Serves 1"
+          "productDescription": ""
         },
         {
           "productImage": "./assets/images/lemon.jpg",
           "productName": "Lemon",
           "productPrice": "50 /kg",
           "productType": "veg",
-          "productDescription": "Serves 1"
+          "productDescription": ""
         },
         {
           "productImage": "./assets/images/KIWI-FRUIT.png",
           "productName": "Kiwi",
           "productPrice": "74 /kg",
           "productType": "veg",
-          "productDescription": "Serves 1"
+          "productDescription": ""
         },
         {
           "productImage": "./assets/images/Pear.jpg",
           "productName": "Pear",
           "productPrice": "60/ kg",
           "productType": "veg",
-          "productDescription": "Serves 1"
+          "productDescription": ""
         },
         {
           "productImage": "./assets/images/Guava.jpg",
           "productName": "Guava",
           "productPrice": "90 /kg",
           "productType": "veg",
-          "productDescription": "Serves 1"
+          "productDescription": ""
         }
       ]
     },
@@ -1086,42 +1086,42 @@
           "productName": "Capsicum",
           "productPrice": "35 /kg",
           "productType": "veg",
-          "productDescription": "Serves 1"
+          "productDescription": ""
         },
         {
           "productImage": "./assets/images/Mushroom.jpg",
           "productName": "Mushroom",
           "productPrice": "59 /kg",
           "productType": "veg",
-          "productDescription": "Serves 1"
+          "productDescription": ""
         },
         {
           "productImage": "./assets/images/beetroot.jpg",
           "productName": "Beetroot",
           "productPrice": "50 /kg",
           "productType": "veg",
-          "productDescription": "Serves 1"
+          "productDescription": ""
         },
         {
           "productImage": "./assets/images/concombre.jpg",
           "productName": "Concomber",
           "productPrice": "30 /kg",
           "productType": "veg",
-          "productDescription": "Serves 1"
+          "productDescription": ""
         },
         {
           "productImage": "./assets/images/corn.jpg",
           "productName": "Corn",
           "productPrice": "70 /kg",
           "productType": "veg",
-          "productDescription": "Serves 1"
+          "productDescription": ""
         },
         {
           "productImage": "./assets/images/Celery.jpg",
           "productName": "Celery",
           "productPrice": "90 /kg",
           "productType": "veg",
-          "productDescription": "Serves 1"
+          "productDescription": ""
         }
       ]
     },
@@ -1167,35 +1167,35 @@
           "productName": "Chinese Spinach",
           "productPrice": "20 /100g",
           "productType": "veg",
-          "productDescription": "Serves 1"
+          "productDescription": ""
         },
         {
           "productImage": "./assets/images/Malabar Spinach.jpg",
           "productName": "Malabar Spinach",
           "productPrice": "35 /100g",
           "productType": "veg",
-          "productDescription": "Serves 1"
+          "productDescription": ""
         },
         {
           "productImage": "./assets/images/Drumstick leaves.jpg",
           "productName": "Drumstick leaves",
           "productPrice": "25 /100g",
           "productType": "veg",
-          "productDescription": "Serves 1"
+          "productDescription": ""
         },
         {
           "productImage": "./assets/images/Dwarf copper leaf.jpg",
           "productName": "Dwarf copper leaf",
           "productPrice": "14 /100g",
           "productType": "veg",
-          "productDescription": "Serves 1"
+          "productDescription": ""
         },
         {
           "productImage": "./assets/images/Cardiospermum halicacabum.jpg",
           "productName": "Cardiospermum halicacabum",
           "productPrice": "20 /100g",
           "productType": "veg",
-          "productDescription": "Serves 1"
+          "productDescription": ""
         }
       ]
     }
