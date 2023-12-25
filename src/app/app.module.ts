@@ -40,6 +40,9 @@ import { DeliveredOrdersComponent } from './delivered-orders/delivered-orders.co
 import { OrderFeedbackComponent } from './order-feedback/order-feedback.component';
 import { ContactComponent } from './contact/contact.component';
 import { ProductsComponent } from './products/products.component';
+import { AdminComponent } from './admin/admin.component';
+import { AdminCustomerDetailsComponent } from './admin-customer-details/admin-customer-details.component';
+import { AdminboardComponent } from './adminboard/adminboard.component';
 // import { CountdownModule } from 'ngx-countdown';
 
 @NgModule({
@@ -80,7 +83,10 @@ import { ProductsComponent } from './products/products.component';
     DeliveredOrdersComponent,
     OrderFeedbackComponent,
     ContactComponent,
-    ProductsComponent
+    ProductsComponent,
+    AdminComponent,
+    AdminCustomerDetailsComponent,
+    AdminboardComponent
   ],
   imports: [
     BrowserModule,

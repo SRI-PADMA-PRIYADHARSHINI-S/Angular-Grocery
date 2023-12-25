@@ -1,0 +1,163 @@
+<div class="customer-details">
+  <div class="customers" *ngFor="let customers of customerDetails;let ind=index">
+    <div class="customer-profiles">
+      <div class="inner-customer-details">
+        <h1>{{customers.username}}</h1>
+      </div>
+      <div class="inner-customer-details">
+        <h2>{{customers.phonenumber}} | {{customers.email}}</h2>
+      </div>
+      <hr>
+      <div class="inner-customer-details personal-details">
+        <div class="details">
+          <button (click)="showAddress(ind)">Address</button>
+        </div>
+        <div class="details">
+          <button (click)="showDeliveredOrders(ind)">{{deliveredOrders[ind]}} Delivered Orders</button>
+        </div>
+        <div class="details">
+          <button (click)="showPendingOrders(ind)">{{pendingOrders[ind]}} Pending Orders</button>
+        </div>
+      </div>
+    </div>
+    <div class="customer-profiles">
+      <div class="inner-customer-details">
+        <img src="./assets/img9.webp" alt="">
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+
+<div class="background" *ngIf="isShowDeliveredOrders">
+  <i class="fa-solid fa-xmark" (click)="showDeliveredOrders(0)"></i>
+  <div class="Orders-List" *ngIf="deliveredOrderDetails.length==0">
+    <img src="./assets/emptycart.gif" alt="" class="emptyImage">
+    <h2>Delivered Orders in Empty!</h2>
+  </div>
+  <div class="Orders-List" *ngIf="deliveredOrderDetails.length!=0">
+    <div class="Orders" *ngFor="let Orders of deliveredOrderDetails;let ind=index">
+      <div class="orders-details">
+      <img src="{{Orders.categoryImage}}" alt="">
+      </div>
+      <div class="orders-details">
+        <div class="category-details">
+          <h1>{{Orders.categoryName}}</h1>
+        </div>
+        <div class="category-details">
+          <h3>Order Id: #{{Orders.orderId}}</h3>
+        </div>
+        <div class="category-details">
+          <h4 (click)="showOrderDetails(ind)">View Details</h4>
+        </div>
+      </div>
+    </div>
+</div>
+</div>
+
+<div class="background" *ngIf="isShowPendingOrders">
+  <i class="fa-solid fa-xmark" (click)="showPendingOrders(0)"></i>
+  <div class="Orders-List" *ngIf="pendingOrderDetails.length==0">
+    <img src="./assets/emptycart.gif" alt="" class="emptyImage">
+    <h2>Pending Orders in Empty!</h2>
+  </div>
+  <div class="Orders-List" *ngIf="pendingOrderDetails.length!=0">
+    <div class="Orders" *ngFor="let Orders of pendingOrderDetails;let ind=index">
+      <div class="orders-details">
+      <img src="{{Orders.categoryImage}}" alt="">
+      </div>
+      <div class="orders-details">
+        <div class="category-details">
+          <h1>{{Orders.categoryName}}</h1>
+        </div>
+        <div class="category-details">
+          <h3>Order Id: #{{Orders.orderId}}</h3>
+        </div>
+        <div class="category-details">
+          <h4 (click)="showPendingOrderDetails(ind)">View Details</h4>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- ----------------------Display order Details---------------------- -->
+<div class="background" *ngIf="isShowOrderDetails">
+  <i class="fa-solid fa-xmark" (click)="showOrderDetails(0)"></i>
+  <div class="Orders-List product-list">
+    <p>Order Id: #{{showOrderDetail.orderId}}</p>
+    <p>Delivered Time: {{showOrderDetail.deliveryDate[1]}}</p>
+
+    <div class="Order-details">
+      <div class="innerItemDetails">
+
+        <div class="innerItemDetails1">
+          <h1><i class="fa-solid fa-truck"></i>&nbsp;&nbsp;{{showOrderDetail.categoryName}}</h1>
+        </div>
+        <div class="innerItemDetails1">
+          <h1><i class="fa-solid fa-truck"></i>&nbsp;&nbsp;{{showOrderDetail.address.addressType}}</h1>
+          <h2>{{showOrderDetail.address.doorNo}}, {{showOrderDetail.address.landmark}},{{showOrderDetail.address.adress}} <br> {{showOrderDetail.address.district}}</h2>
+        </div>
+      </div>
+      <div class="innerItemDetails">
+        <h2> {{showOrderDetail.orderedItems.length}} ITEM</h2>
+
+        <div class="innerProductDetail">
+          <div class="innerProductDetails">
+            <div class="innerDivProductDetails" *ngFor="let orderProductes of showOrderDetail.orderedItems">
+              <div> <p>{{orderProductes.productName}} x {{orderProductes.productQuantity}}</p></div>
+              <div> <h2>₹ {{orderProductes.productPrice}}</h2></div>
+            </div>
+            <div class="innerDivProductDetails">
+              <div> <p>Item Total</p></div>
+              <div> <h2>₹ {{showOrderDetail.totalPrice-43}}</h2></div>
+            </div>
+            <div class="innerDivProductDetails" style="margin-bottom: 10px;">
+              <div> <p>Delivery Fee</p></div>
+              <div> <h2>₹ 43</h2></div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+      <div class="innerItemDetails">
+        <div class="paymentType">
+          <div class="innerDivProductDetails">
+            <p>{{showOrderDetail.paymentMenthod}}</p>
+          </div>
+          <div>
+            <h2>Bill Total</h2>
+          </div>
+          <div>
+            <h2>₹ {{showOrderDetail.totalPrice}}</h2>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="background" *ngIf="isShowAddress">
+  <i class="fa-solid fa-xmark" (click)="showAddress(0)"></i>
+  <div class="Orders-List" *ngIf="showAddressDetail.length==0">
+    <img src="./assets/emptycart.gif" alt="" class="emptyImage">
+    <h2>Address are Empty!</h2>
+  </div>
+  <div class="Orders-List Address-direction" *ngIf="showAddressDetail.length!=0">
+        <div class="Address-list" *ngFor="let adressTypes of showAddressDetail; let ind=index">
+          <div class="Address-icon">
+            <i class="fa-solid {{this.adressTypes.iconType}}"></i>
+            <p>{{this.adressTypes.addressType}}</p>
+          </div>
+          <div>
+            <p>{{this.adressTypes.doorNo}},&nbsp; {{this.adressTypes.adress}},</p><br>
+            <p>{{this.adressTypes.landmark}},</p><br>
+            <p>{{this.adressTypes.district}}.</p><br>
+          </div>
+        </div>
+</div>

@@ -24,8 +24,11 @@ cursor:pointer;
   width: 100%;
 }
 h1{
-font-size: 1.5vw;
 font-weight: medium;
+text-align: center;
+font-size: 2.5rem;
+color: #130f40;
+padding-top: .5rem;
 }
 h3{
   margin-top: 0.5%;
@@ -111,23 +114,30 @@ input:checked + .rectangle{
   background-color: green;
 }
 .product{
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  gap: 10%;
-  width: 140%;
-  margin-left: 27%;
-  margin-top: 3%;
+  margin: 5px 50px 50px 5%;
+  width: 90%;
+  text-align: center;
+  margin: 50px;
+  display: inline-block;
+
 }
+.products:hover{
+  box-shadow: 0 0 10px 10px  #27ae60;
+}
+
 
 .products{
   /* border-bottom: 1px solid rgb(180, 180, 180); */
   position: relative;
+  margin: 10px;
+  display: inline-block;
+  border: 1px solid #184d47;
+  border-radius: 0 0 50px 50px;
 }
 
 .products h2{
-  font-size: 1vw;
-  margin-top: 8%;
+  font-size: 1.5vw;
+  margin-top: 18%;
   margin-left: 4%;
 }
 .products h4{
@@ -138,26 +148,23 @@ input:checked + .rectangle{
 }
 
 .products img{
-  width: 150%;
-  height: 24vh;
-  margin-left: 80%;
-  margin-top: -14%;
-  border-radius: 10px;
-  margin-bottom: 4%;
+  height: 100px;
+  padding: 1px;
+  width: 60%;
+
 }
 .add{
-  width: 35%;
-  height: 5vh;
-  position: absolute;
-  left: 82.5%;
-  top: 70%;
-  background-color: white;
-  color: green;
-  font-size: 0.8vw;
+  border: 1px solid  #27ae60;
+  border-radius: 20px;
+  background:  #27ae60;
+  color: white;
   font-weight: bold;
-  cursor: pointer;
-  border: 1px solid rgb(184, 184, 184);
-  border-radius: 5px;
+  padding: 10px 70px;
+  margin-top: 10px;
+}
+.add:hover{
+  border: 1px solid  #27ae60;
+  box-shadow: 0 0 10px 5px  #27ae60 inset;
 }
 
 

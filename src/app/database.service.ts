@@ -4,6 +4,7 @@ import { Router } from '@angular/router';
 import { LoginGuardGuard } from './login-guard.guard';
 import { formatDate } from '@angular/common';
 import { OrderDeliveredService } from './order-delivered.service';
+import { environment, NodeMailer, Admin } from 'src/environment/environment';
 
 
 
@@ -103,7 +104,7 @@ export class DatabaseService {
 
     this.userMob=data.phonenumber;
 
-    this.http.get<any>("http://localhost:3000/customerDetails").subscribe((x)=>{
+    this.http.get<any>(environment.CustomerDetails).subscribe((x)=>{
       const check=x.find((Umob:any)=>{
         return data.phonenumber==Umob.phonenumber;
       })
@@ -112,7 +113,7 @@ export class DatabaseService {
       }
       else{
         alert("registered successfully");
-        return this.http.post("http://localhost:3000/customerDetails",data).subscribe(x=>{
+        return this.http.post(environment.CustomerDetails,data).subscribe(x=>{
           console.log(x);
           let body={
             email:data.email,
@@ -132,7 +133,7 @@ export class DatabaseService {
 
   read_data(loginData:any,returl:any){
 
-    this.http.get<any>("http://localhost:3000/customerDetails").subscribe((x)=>{
+    this.http.get<any>(environment.CustomerDetails).subscribe((x)=>{
       const data=x.find((log:any)=>{
         this.name=log;
 
@@ -152,12 +153,14 @@ export class DatabaseService {
           });
         }
         else{
-          console.log(returl);
           this.router.navigate([returl]).then(()=>{
             location.reload()
           });
         }
         return alert("login successfull");
+      }
+      else if(Admin.Phonenumber==loginData.loginPhoneNumber && Admin.Password==loginData.loginPassword){
+        this.router.navigateByUrl("admin");
       }
       else{
         return alert("invalid details");

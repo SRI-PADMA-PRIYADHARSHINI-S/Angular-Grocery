@@ -1,0 +1,267 @@
+*{
+  font-family: sans-serif;
+}
+.category{
+  display: flex;
+  flex-wrap: wrap;
+  width: 94%;
+  margin-left: 6%;
+  padding-bottom: 50px;
+  gap: 2%;
+}
+.categorys{
+   cursor: pointer;
+   width: 28%;
+   margin-top: 2%;
+}
+h4{
+  font-weight: bold;
+  margin-left: 4%;
+  margin-top: -3%;
+  font-size: 1vw;
+}
+h5{
+  font-weight: lighter;
+  color: gray;
+  font-size: 0.8vw;
+  margin-left: 4%;
+  margin-top: 2%;
+}
+.categorys img{
+  width: 90%;
+  height:170px;
+  margin: 5%;
+}
+.offer{
+  display: flex;
+  border-bottom: 1px solid gray;
+  width: 88%;
+  gap: 30px;
+  align-items: center;
+  margin: 4%;
+}
+.offer div{
+  width: 60px;
+  height: 30px;
+}
+.rating{
+  background-color: rgb(17, 202, 17);
+  color: white;
+  font-size: 1.2vw;
+  font-weight: bold;
+  margin: 2%;
+}
+.time h5{
+margin-top: 10%;
+}
+.rate h5{
+  margin-top: 10%;
+}
+.offer_1{
+  margin-left: 4%;
+  width: 88%;
+  height: 4vh;
+  border-bottom: 1px solid gray;
+}
+.offer_1 i{
+  margin-left: 2%;
+  color: rgb(191, 28, 28);
+}
+.offer_1 h4{
+  margin-left: 10%;
+  margin-top: -7%;
+  width: 70%;
+  font-weight: lighter;
+  color: rgb(191, 28, 28);
+}
+.view{
+  text-align: center;
+  margin-top: 5%;
+  font-size: 0.8vw;
+  height: 5vh;
+  font-weight: medium;
+  width: 90%;
+  color: rgb(0, 166, 255);
+  visibility: hidden;
+  cursor: pointer;
+}
+
+.categorys:hover{
+  border: 1px solid gray;
+  box-shadow: 0.5px 0.5px 2.5px 0.5px rgba(0, 0,0,1);
+}
+.categorys:hover .buttons{
+  visibility: visible;
+}
+.rating i{
+  margin-top: 12%;
+  margin-left: 5%;
+  color: white;
+}
+.addcategorys{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 4vw;
+  color: rgb(17, 202, 17);
+}
+.buttons{
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  visibility: hidden;
+}
+.buttons button{
+  background-color: white;
+  border: none;
+  font-size: 1vw;
+  cursor: pointer;
+  font-weight: bold;
+}
+.buttons button:hover{
+  color: #27ae60;
+}
+.AddCategoryForm{
+  position: fixed;
+  left: 253px;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background-color: hsla(204, 72%, 64%, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.inner-box{
+  background-color: white;
+  width: 300px;
+  border-radius: 30px;
+  padding: 20px;
+  animation: CategoryForm 200ms linear 1;
+}
+@keyframes CategoryForm {
+from{
+  transform: translateY(-200px);
+}
+to{
+  transform: translateY(0px);
+}
+}
+.inner-box-contents i{
+  font-size: 1.5vw;
+  cursor: pointer;
+}
+.inner-box-contents i:hover{
+  color:#27ae60;
+}
+.inner-box-contents h1{
+  font-size: 1.3vw;
+  text-align: center;
+}
+.inner-contents{
+  display: flex;
+  flex-direction: column;
+}
+.inner-form-contents input{
+  width: 290px;
+  margin-top: 20px;
+  height: 40px;
+  padding-left: 10px;
+  font-size: 1vw;
+  border-radius: 10px;
+}
+.inner-form-contents button{
+  width: 300px;
+  margin-top: 20px;
+  height: 40px;
+  font-size: 1vw;
+  cursor: pointer;
+  color: white;
+  border: none;
+  background-color: rgb(17, 202, 17);
+  font-weight: bold;
+  border-radius: 10px;
+}
+
+
+
+.productPage{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+  width: 94%;
+  padding: 0px 30px 0px 30px;
+}
+.products{
+  display: flex;
+  justify-content: space-between;
+  width: 60%;
+  background-color: white;
+  padding: 40px;
+}
+.products h1{
+  font-size: 1.2vw;
+  margin-bottom: 10px;
+}
+.products h2{
+  font-size: 1vw;
+  font-weight: lighter;
+  margin-bottom: 20px;
+}
+.products h3{
+  font-size: 1vw;
+  margin-bottom: 20px;
+  font-weight: lighter;
+  color: #808080;
+}
+.products img{
+  width: 150px;
+  height: 100px;
+  border-radius: 5px;
+}
+.products-details{
+  display: flex;
+  flex-direction: column;
+}
+.add{
+  width: 150px;
+  height: 100px;
+  border-radius: 5px;
+  font-size: 2.5vw;
+  background-color: transparent;
+  border: 2px solid rgb(17, 202, 17);
+  color: rgb(17, 202, 17);
+  cursor: pointer;
+}
+
+.products .productbuttons{
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+ .products-details .productbuttons button{
+  width: 100px;
+  height: 30px;
+  border: none;
+  background-color: transparent;
+  font-size: 1.2vw;
+  font-weight: bold;
+  cursor: pointer;
+}
+ .products-details .productbuttons button:hover{
+  color: #27ae60;
+}
+
+.back{
+  width: 100px;
+  height: 30px;
+  border: none;
+  background-color: transparent;
+  font-size: 1.2vw;
+  font-weight: bold;
+  cursor: pointer;
+}
+.back:hover{
+  color:#27ae60;
+}

@@ -1,0 +1,202 @@
+<div class="category" *ngIf="!adminProductPage">
+  <div class="categorys addcategorys" (click)="AddCategorys()">
+    <i class="fa-solid fa-plus"></i>
+  </div>
+  <div class="categorys" *ngFor="let values of val; let ind=index" >
+    <div class="categorys-contents">
+      <img src="{{values.categoryimage}}" alt="" (click)="categoryList(ind)">
+    </div>
+    <div class="categorys-contents">
+      <h4>{{values.categoryname}}</h4>
+      <h5>{{values.productvariety}}</h5>
+    <div class="offer">
+      <div class="rating"><i class="fa-solid fa-star"></i> {{values.Rating}}</div>
+      <div class="time"><h5>{{values.timeDel}}&nbsp;MINS</h5></div>
+    </div>
+    <div class="offer_1" *ngIf="values.offer.length>=1">
+      <i class="fa-solid fa-percent"></i>
+      <h4>{{values.offer}}</h4>
+    </div>
+    <div class="buttons">
+      <button (click)="UpdateCategorys(ind)">Update</button>
+      <button (click)="DeleteCategory(ind)">Delete</button>
+    </div>
+  </div>
+</div>
+</div>
+
+<div class="AddCategoryForm"  *ngIf="showCategoryForm">
+  <div class="inner-box">
+    <div class="inner-contents">
+      <div class="inner-box-contents">
+        <i class="fa-solid fa-xmark" (click)="AddCategorys()"></i>
+      </div>
+      <div class="inner-box-contents">
+        <h1>Add Categorys</h1>
+
+      </div>
+      <div class="inner-box-contents">
+
+      </div>
+    </div>
+    <div class="inner-contents">
+      <form action="" [formGroup]="AddCategory">
+        <div class="inner-form-contents">
+          <input type="text"placeholder="Enter Category Name" formControlName="categoryname">
+        </div>
+        <div class="inner-form-contents">
+          <input type="text"placeholder="Enter Category image" formControlName="categoryimage">
+        </div>
+        <div class="inner-form-contents">
+          <input type="text"placeholder="Enter Category Description" formControlName="productvariety">
+        </div>
+        <div class="inner-form-contents">
+          <input type="text"placeholder="Enter Category Delivery time" formControlName="timeDel">
+        </div>
+        <div class="inner-form-contents">
+          <input type="text"placeholder="Enter Category offer" formControlName="offer">
+        </div>
+        <div class="inner-form-contents">
+          <button [disabled]="!AddCategory.valid" (click)="AddCategoryDB(AddCategory.value)">ADD</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+<div class="AddCategoryorm"  *ngIf="showUpdate">
+  <div class="inner-box">
+    <div class="inner-contents">
+      <div class="inner-box-contents">
+        <i class="fa-solid fa-xmark" (click)="UpdateCategorys(0)"></i>
+      </div>
+      <div class="inner-box-contents">
+        <h1>Update Category</h1>
+      </div>
+      <div class="inner-box-contents">
+
+      </div>
+    </div>
+    <div class="inner-contents">
+      <form action="" [formGroup]="UpdateCategoryForm">
+        <div class="inner-form-contents">
+          <input type="text"placeholder="Enter Category Name" formControlName="categoryname">
+        </div>
+        <div class="inner-form-contents">
+          <input type="text"placeholder="Enter Category image" formControlName="categoryimage">
+        </div>
+        <div class="inner-form-contents">
+          <input type="text"placeholder="Enter Category Description" formControlName="productvariety">
+        </div>
+        <div class="inner-form-contents">
+          <input type="text"placeholder="Enter category Delivery time" formControlName="timeDel">
+        </div>
+        <div class="inner-form-contents">
+          <input type="text"placeholder="Enter Category offer" formControlName="offer">
+        </div>
+        <div class="inner-form-contents">
+          <input type="text"placeholder="Enter CouponCode" formControlName="CouponCode">
+        </div>
+        <div class="inner-form-contents">
+          <button [disabled]="!UpdateCategoryForm.valid" (click)="UpdateCategoryDetails(UpdateCategoryForm.value)">Update</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+<div class="productPage" *ngIf="adminProductPage">
+  <div class="products">
+    <div class="products-details">
+      <h1>{{productList.categoryname}}</h1>
+      <h2>Adding Products</h2>
+      <button class="back" (click)="categoryList(0)">Back</button>
+    </div>
+    <div class="products-details">
+      <button class="add" (click)="showProduct()">+</button>
+    </div>
+  </div>
+  <div class="products" *ngFor="let product of productList.products;let ind=index">
+    <div class="products-details">
+      <h1>{{product.productName}}</h1>
+      <h2>₹ {{product.productPrice}}</h2>
+      <h3>{{product.productDescription}}</h3>
+      <div class="productbuttons">
+        <button (click)="updateProduct(ind)">Update</button>
+        <button (click)="DeleteProductDetails(ind)">Delete</button>
+      </div>
+    </div>
+    <div class="products-details">
+      <img src="{{product.productImage}}" alt="image">
+    </div>
+  </div>
+</div>
+
+<div class="AddCategoryForm"  *ngIf="showProductForm">
+  <div class="inner-box">
+    <div class="inner-contents">
+      <div class="inner-box-contents">
+        <i class="fa-solid fa-xmark" (click)="showProduct()"></i>
+      </div>
+      <div class="inner-box-contents">
+        <h1>Add Product</h1>
+      </div>
+      <div class="inner-box-contents">
+
+      </div>
+    </div>
+    <div class="inner-contents">
+      <form action="" [formGroup]="AddProductForm">
+        <div class="inner-form-contents">
+          <input type="text"placeholder="Enter Product Name" formControlName="productName">
+        </div>
+        <div class="inner-form-contents">
+          <input type="text"placeholder="Enter Product image" formControlName="productImage">
+        </div>
+        <div class="inner-form-contents">
+          <input type="text"placeholder="Enter Product Description" formControlName="productDescription">
+        </div>
+        <div class="inner-form-contents">
+          <input type="text"placeholder="Enter Product Price" formControlName="productPrice">
+        </div>
+        <div class="inner-form-contents">
+          <button [disabled]="!AddProductForm.valid" (click)="AddProductDetails(AddProductForm.value)">ADD</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+<div class="AddCategoryForm"  *ngIf="showUpdateProduct">
+  <div class="inner-box">
+    <div class="inner-contents">
+      <div class="inner-box-contents">
+        <i class="fa-solid fa-xmark" (click)="updateProduct(0)"></i>
+      </div>
+      <div class="inner-box-contents">
+        <h1>Update Product</h1>
+      </div>
+      <div class="inner-box-contents">
+
+      </div>
+    </div>
+    <div class="inner-contents">
+      <form action="" [formGroup]="UpdateProductForm">
+        <div class="inner-form-contents">
+          <input type="text"placeholder="Enter Product Name" formControlName="productName">
+        </div>
+        <div class="inner-form-contents">
+          <input type="text"placeholder="Enter Product image" formControlName="productImage">
+        </div>
+        <div class="inner-form-contents">
+          <input type="text"placeholder="Enter Product Description" formControlName="productDescription">
+        </div>
+        <div class="inner-form-contents">
+          <input type="text"placeholder="Enter Product Price" formControlName="productPrice">
+        </div>
+        <div class="inner-form-contents">
+          <button [disabled]="!UpdateProductForm.valid" (click)="UpdateProductDetails(UpdateProductForm.value)">UPDATE</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
