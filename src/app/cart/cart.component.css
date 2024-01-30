@@ -3,7 +3,10 @@
 }
 
 body{
+  background-image: url('https://i0.wp.com/blog.southofseoul.net/wp-content/uploads/2021/07/buy-groceries-pyeongtaek-title-3.png?fit=1200%2C675&ssl=1');
   background-color: #e9ecee;
+  image-rendering: auto;
+  background-size: 100% 100%;
 }
 .outer{
   margin-left: 40%;

@@ -3,8 +3,9 @@
 }
 
 .outer{
-  background-color: #359c57;
-  width: 100%;
+  background-image: url('https://thumbs.dreamstime.com/b/shopping-paper-bag-different-groceries-light-blue-background-flat-lay-space-text-156220126.jpg');
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
   padding-bottom: 40px;
   padding-top: 40px;
 }

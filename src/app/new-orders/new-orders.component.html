@@ -11,7 +11,7 @@
   <div class="orderBox">
   <div class="commonBox" *ngFor="let OrderItems of newOrderDetails; let indexNumber=index ">
 <div class="commonBoxes">
-  <div><img src="{{OrderItems.categoryImage}}" alt=""></div>
+  <!-- <div><img src="{{OrderItems.categoryImage}}" alt="hey"></div> -->
   <div>
     <h2 (click)="categoryRoute(indexNumber)">{{OrderItems.categoryName}}</h2>
     <h4>Order #{{OrderItems.orderId}} | {{OrderItems.orderedDate[0]}}, {{OrderItems.orderedDate[1]}}</h4>

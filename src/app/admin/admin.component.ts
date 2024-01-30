@@ -39,8 +39,7 @@ export class AdminComponent {
     categoryimage:['',[Validators.required]],
     productvariety:['',[Validators.required]],
     timeDel:['',[Validators.required]],
-    offer:['',[]],
-    CouponCode:['',[]]
+    offer:['',[]]
   })
   // this form is used to add the product
   this.AddProductForm=formbuilder.group({
@@ -83,7 +82,6 @@ export class AdminComponent {
         productvariety:[this.val[index].productvariety,[Validators.required]],
         timeDel:[this.val[index].timeDel,[Validators.required]],
         offer:[offerValue,[]],
-        CouponCode:[CouponValue,[]],
         index:[index,[]]
       })
     }

@@ -31,10 +31,10 @@ emptyArray:any=[];
 productArray:any=[];
 setAddtoCart:any=[];
 constructor(private category:DatabaseService, private ordered:OrderDeliveredService){
-  this.slideImageUrl=["https://cdn.modernbazaar.online/assets/uploads/category/compress/Subcat_banner_fruits_Vegetable_low.jpg","https://nammorganic.wpengine.com/wp-content/uploads/2023/02/pop-vid-3.jpg"
-,"https://www.farmizen.com/wp-content/uploads/2022/02/3.png","https://nammorganic.wpengine.com/wp-content/uploads/2023/02/pop-vid-2.jpg"];
+  this.slideImageUrl=["https://4.bp.blogspot.com/-3ukunb8CYLU/VKEY9hbvK_I/AAAAAAAAYQI/xLqkqbQgcqY/s1600/734174_326560097460135_421110517_n.jpg","https://images.freekaamaal.com/store_desc_images/1515145891.jpg"
+,"https://media.istockphoto.com/id/1346744481/photo/anonymous-chef-harvesting-fresh-vegetables-on-a-farm.webp?b=1&s=170667a&w=0&k=20&c=cX67PyM5-oJrnKlH6hSTUYGEAYSsaFCYVRVSHDTOJc4=","https://nammamaligai.com/wp-content/uploads/2022/08/nm-.jpg"];
 //https://www.farmizen.com/wp-content/uploads/2022/03/Subscriptions.jpg
-// set the dish  array as empty after login
+// set the product  array as empty after login
 this.productArray=sessionStorage.getItem('products');
 if(this.productArray=="undefined"){
   this.productArray=[];

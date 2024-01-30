@@ -22,14 +22,28 @@
       "ConfirmPassword": "Pri@2001",
       "AddToCartDetails": [
         {
-          "productName": "Green Chilli",
-          "productQuantity": 1,
-          "productPrice": 80
+          "categoryName": "Vegetables",
+          "categoryImage": "./assets/images/vegetable.jpg",
+          "productName": "Carrot",
+          "productQuantity": 2,
+          "productPrice": 100,
+          "productType": "veg"
         },
         {
-          "productName": "Capsicum",
-          "productQuantity": 1,
-          "productPrice": 35
+          "categoryName": "Vegetables",
+          "categoryImage": "./assets/images/vegetable.jpg",
+          "productName": "Celery",
+          "productQuantity": 2,
+          "productPrice": 180,
+          "productType": "veg"
+        },
+        {
+          "categoryName": "Vegetables",
+          "categoryImage": "./assets/images/vegetable.jpg",
+          "productName": "Corn",
+          "productQuantity": 3,
+          "productPrice": 210,
+          "productType": "veg"
         }
       ],
       "Address": [
@@ -59,37 +73,42 @@
         }
       ],
       "CurrentOrderAddress": {
-        "adress": "Newtrichybranchroad",
-        "doorNo": "173",
-        "landmark": "nearmarket",
+        "adress": "gugaiThathagaahpatty",
+        "doorNo": "09",
+        "landmark": "neargugai",
         "district": "salem",
-        "addressType": "Home",
-        "iconType": "fa-house"
+        "addressType": "Others",
+        "iconType": "fa-location-dot"
       },
       "cartOrderDetails": {
         "categoryName": "Fruit",
         "categoryImage": "./assets/images/fruit.jpg",
         "orderItems": [
           {
-            "productName": "Green Chilli",
-            "productQuantity": 1,
-            "productPrice": 80
+            "productName": "Carrot",
+            "productQuantity": 2,
+            "productPrice": 100
           },
           {
-            "productName": "Capsicum",
-            "productQuantity": 1,
-            "productPrice": 35
+            "productName": "Celery",
+            "productQuantity": 2,
+            "productPrice": 180
+          },
+          {
+            "productName": "Corn",
+            "productQuantity": 3,
+            "productPrice": 210
           }
         ],
         "orderAddress": {
-          "adress": "Newtrichybranchroad",
-          "doorNo": "173",
-          "landmark": "nearmarket",
+          "adress": "gugaiThathagaahpatty",
+          "doorNo": "09",
+          "landmark": "neargugai",
           "district": "salem",
-          "addressType": "Home",
-          "iconType": "fa-house"
+          "addressType": "Others",
+          "iconType": "fa-location-dot"
         },
-        "totalPrice": 115
+        "totalPrice": 533
       },
       "Favorites": [
         {
@@ -174,17 +193,175 @@
           ]
         }
       ],
-      "paymentOrderedDetails": [],
-      "orderedDate": [],
+      "paymentOrderedDetails": [
+        {
+          "orderId": 892030,
+          "totalPrice": 353,
+          "categoryName": "Fruit",
+          "categroyImage": "./assets/images/fruit.jpg",
+          "address": {
+            "adress": "gugaiThathagaahpatty",
+            "doorNo": "09",
+            "landmark": "neargugai",
+            "district": "salem",
+            "addressType": "Others",
+            "iconType": "fa-location-dot"
+          },
+          "orderedDate": [
+            "Mon",
+            "29-Jan-2024 07:25:19 PM"
+          ],
+          "deliveryDate": [
+            "Mon",
+            "29-Jan-2024 07:27:19 PM"
+          ],
+          "orderedItems": [
+            {
+              "productName": "Green Chilli",
+              "productQuantity": 3,
+              "productPrice": 240
+            },
+            {
+              "productName": "Capsicum",
+              "productQuantity": 2,
+              "productPrice": 70
+            }
+          ],
+          "paymentMenthod": "Cash On Delivery",
+          "amountPaid": "not paid"
+        },
+        {
+          "orderId": 562707,
+          "totalPrice": 213,
+          "categoryName": "Fruit",
+          "categroyImage": "./assets/images/fruit.jpg",
+          "address": {
+            "adress": "gugaiThathagaahpatty",
+            "doorNo": "09",
+            "landmark": "neargugai",
+            "district": "salem",
+            "addressType": "Others",
+            "iconType": "fa-location-dot"
+          },
+          "orderedDate": [
+            "Mon",
+            "29-Jan-2024 07:55:02 PM"
+          ],
+          "deliveryDate": [
+            "Mon",
+            "29-Jan-2024 07:57:02 PM"
+          ],
+          "orderedItems": [
+            {
+              "productName": "Cardiospermum halicacabum",
+              "productQuantity": 6,
+              "productPrice": 120
+            },
+            {
+              "productName": "Mint",
+              "productQuantity": 2,
+              "productPrice": 50
+            }
+          ],
+          "paymentMenthod": "Cash On Delivery",
+          "amountPaid": "not paid"
+        },
+        {
+          "orderId": 215654,
+          "totalPrice": 213,
+          "categoryName": "Fruit",
+          "categroyImage": "./assets/images/fruit.jpg",
+          "address": {
+            "adress": "gugaiThathagaahpatty",
+            "doorNo": "09",
+            "landmark": "neargugai",
+            "district": "salem",
+            "addressType": "Others",
+            "iconType": "fa-location-dot"
+          },
+          "orderedDate": [
+            "Mon",
+            "29-Jan-2024 07:57:13 PM"
+          ],
+          "deliveryDate": [
+            "Mon",
+            "29-Jan-2024 07:59:13 PM"
+          ],
+          "orderedItems": [
+            {
+              "productName": "Cardiospermum halicacabum",
+              "productQuantity": 6,
+              "productPrice": 120
+            },
+            {
+              "productName": "Mint",
+              "productQuantity": 2,
+              "productPrice": 50
+            }
+          ],
+          "paymentMenthod": "Cash On Delivery",
+          "amountPaid": "not paid"
+        },
+        {
+          "orderId": 335648,
+          "totalPrice": 533,
+          "categoryName": "Fruit",
+          "categroyImage": "./assets/images/fruit.jpg",
+          "address": {
+            "adress": "gugaiThathagaahpatty",
+            "doorNo": "09",
+            "landmark": "neargugai",
+            "district": "salem",
+            "addressType": "Others",
+            "iconType": "fa-location-dot"
+          },
+          "orderedDate": [
+            "Mon",
+            "29-Jan-2024 08:01:10 PM"
+          ],
+          "deliveryDate": [
+            "Mon",
+            "29-Jan-2024 08:03:10 PM"
+          ],
+          "orderedItems": [
+            {
+              "productName": "Carrot",
+              "productQuantity": 2,
+              "productPrice": 100
+            },
+            {
+              "productName": "Celery",
+              "productQuantity": 2,
+              "productPrice": 180
+            },
+            {
+              "productName": "Corn",
+              "productQuantity": 3,
+              "productPrice": 210
+            }
+          ],
+          "paymentMenthod": "Cash On Delivery",
+          "amountPaid": "not paid"
+        }
+      ],
+      "orderedDate": [
+        "29-Jan-2024 07:26:19 PM",
+        "29-Jan-2024 07:56:02 PM",
+        "29-Jan-2024 07:58:13 PM",
+        "29-Jan-2024 08:02:10 PM"
+      ],
       "deliveredDate": [
-        "24-Jul-2023 02:13:32 PM",
-        "10-Aug-2023 07:13:03 PM",
-        "10-Aug-2023 07:25:18 PM",
-        "10-Aug-2023 07:28:55 PM",
-        "14-Dec-2023 08:47:52 PM",
-        "14-Dec-2023 08:51:44 PM",
-        "14-Dec-2023 08:56:00 PM",
-        "14-Dec-2023 08:57:34 PM"
+        "09-Jan-2024 06:52:29 PM",
+        "09-Jan-2024 07:11:51 PM",
+        "09-Jan-2024 07:14:42 PM",
+        "10-Jan-2024 12:21:04 PM",
+        "10-Jan-2024 12:55:51 PM",
+        "29-Jan-2024 11:22:30 AM",
+        "29-Jan-2024 11:25:48 AM",
+        "29-Jan-2024 07:27:19 PM",
+        "29-Jan-2024 07:53:56 PM",
+        "29-Jan-2024 07:59:13 PM",
+        "29-Jan-2024 08:03:10 PM"
       ],
       "Orders": [
         {
@@ -556,44 +733,14 @@
       "ConfirmPassword": "Main@2001",
       "AddToCartDetails": [
         {
-          "categoryName": "Vegetables",
-          "categoryImage": "./assets/images/vegetable.jpg",
-          "productName": "Green Chilli",
-          "productQuantity": 4,
-          "productPrice": 320,
-          "productType": "veg"
-        },
-        {
-          "categoryName": "Vegetables",
-          "categoryImage": "./assets/images/vegetable.jpg",
           "productName": "Capsicum",
-          "productQuantity": 4,
-          "productPrice": 140,
-          "productType": "veg"
-        },
-        {
-          "categoryName": "Vegetables",
-          "categoryImage": "./assets/images/vegetable.jpg",
-          "productName": "Mushroom",
           "productQuantity": 1,
-          "productPrice": 59,
-          "productType": "veg"
+          "productPrice": 35
         },
         {
-          "categoryName": "Vegetables",
-          "categoryImage": "./assets/images/vegetable.jpg",
-          "productName": "Beetroot",
-          "productQuantity": 1,
-          "productPrice": 50,
-          "productType": "veg"
-        },
-        {
-          "categoryName": "Vegetables",
-          "categoryImage": "./assets/images/vegetable.jpg",
           "productName": "Corn",
           "productQuantity": 1,
-          "productPrice": 70,
-          "productType": "veg"
+          "productPrice": 70
         }
       ],
       "Address": [
@@ -654,10 +801,65 @@
         },
         "totalPrice": 682
       },
-      "paymentOrderedDetails": [],
-      "orderedDate": [],
+      "paymentOrderedDetails": [
+        {
+          "orderId": 544902,
+          "totalPrice": 682,
+          "categoryName": "Vegetables",
+          "categroyImage": "./assets/images/vegetable.jpg",
+          "address": {
+            "adress": "kondalamPattyByepass",
+            "doorNo": "54",
+            "landmark": "nearByePass",
+            "district": "salem",
+            "addressType": "Home",
+            "iconType": "fa-house"
+          },
+          "orderedDate": [
+            "Mon",
+            "29-Jan-2024 11:39:17 AM"
+          ],
+          "deliveryDate": [
+            "Mon",
+            "29-Jan-2024 11:41:17 AM"
+          ],
+          "orderedItems": [
+            {
+              "productName": "Green Chilli",
+              "productQuantity": 4,
+              "productPrice": 320
+            },
+            {
+              "productName": "Capsicum",
+              "productQuantity": 4,
+              "prodductPrice": 140
+            },
+            {
+              "productName": "Mushroom",
+              "productQuantity": 1,
+              "productPrice": 59
+            },
+            {
+              "productName": "Beetroot",
+              "productQuantity": 1,
+              "productPrice": 50
+            },
+            {
+              "productName": "Corn",
+              "productQuantity": 1,
+              "productPrice": 70
+            }
+          ],
+          "paymentMenthod": "Cash On Delivery",
+          "amountPaid": "not paid"
+        }
+      ],
+      "orderedDate": [
+        "29-Jan-2024 11:40:17 AM"
+      ],
       "deliveredDate": [
-        "23-Jul-2023 04:19:58 PM"
+        "29-Jan-2024 11:40:01 AM",
+        "29-Jan-2024 11:41:17 AM"
       ],
       "Favorites": [
         {
@@ -811,36 +1013,36 @@
       "ConfirmPassword": "Har@2005",
       "AddToCartDetails": [
         {
-          "categoryName": "Spinch",
-          "categoryImage": "./assets/images/spinch1.jpeg",
-          "productName": "Chinese Spinach",
+          "categoryName": "Fruit",
+          "categoryImage": "./assets/images/fruit.jpg",
+          "productName": "Pear",
           "productQuantity": 2,
-          "productPrice": 40,
+          "productPrice": 120,
           "productType": "veg"
         },
         {
-          "categoryName": "Spinch",
-          "categoryImage": "./assets/images/spinch1.jpeg",
-          "productName": "Dwarf copper leaf",
-          "productQuantity": 2,
-          "productPrice": 28,
-          "productType": "veg"
-        },
-        {
-          "categoryName": "Spinch",
-          "categoryImage": "./assets/images/spinch1.jpeg",
-          "productName": "Cardiospermum halicacabum",
+          "categoryName": "Fruit",
+          "categoryImage": "./assets/images/fruit.jpg",
+          "productName": "Guava",
           "productQuantity": 3,
-          "productPrice": 60,
+          "productPrice": 270,
+          "productType": "veg"
+        },
+        {
+          "categoryName": "Fruit",
+          "categoryImage": "./assets/images/fruit.jpg",
+          "productName": "Kiwi",
+          "productQuantity": 1,
+          "productPrice": 74,
           "productType": "veg"
         }
       ],
       "Address": [
         {
-          "adress": "MuniyapattyKongunadu",
-          "doorNo": "1008",
-          "landmark": "nearkovil",
-          "district": "Chinnasalem",
+          "adress": "Newtrichybranchroad",
+          "doorNo": "5",
+          "landmark": "neargugai",
+          "district": "shevapat",
           "addressType": "Home",
           "iconType": "fa-house"
         }
@@ -854,23 +1056,23 @@
         "iconType": "fa-house"
       },
       "cartOrderDetails": {
-        "categoryName": "Spinch",
-        "categoryImage": "./assets/images/spinch1.jpeg",
+        "categoryName": "Fruit",
+        "categoryImage": "./assets/images/fruit.jpg",
         "orderItems": [
           {
-            "productName": "Chinese Spinach",
+            "productName": "Pear",
             "productQuantity": 2,
-            "productPrice": 40
+            "productPrice": 120
           },
           {
-            "productName": "Dwarf copper leaf",
-            "productQuantity": 2,
-            "productPrice": 28
-          },
-          {
-            "productName": "Cardiospermum halicacabum",
+            "productName": "Guava",
             "productQuantity": 3,
-            "productPrice": 60
+            "productPrice": 270
+          },
+          {
+            "productName": "Kiwi",
+            "productQuantity": 1,
+            "productPrice": 74
           }
         ],
         "orderAddress": {
@@ -881,11 +1083,99 @@
           "addressType": "Home",
           "iconType": "fa-house"
         },
-        "totalPrice": 171
+        "totalPrice": 507
       },
-      "paymentOrderedDetails": [],
-      "orderedDate": [],
-      "deliveredDate": [],
+      "paymentOrderedDetails": [
+        {
+          "orderId": 683197,
+          "totalPrice": 171,
+          "categoryName": "Spinch",
+          "categroyImage": "./assets/images/spinch1.jpeg",
+          "address": {
+            "adress": "MuniyapattyKongunadu",
+            "doorNo": "1008",
+            "landmark": "nearkovil",
+            "district": "Chinnasalem",
+            "addressType": "Home",
+            "iconType": "fa-house"
+          },
+          "orderedDate": [
+            "Mon",
+            "29-Jan-2024 11:46:21 AM"
+          ],
+          "deliveryDate": [
+            "Mon",
+            "29-Jan-2024 11:48:21 AM"
+          ],
+          "orderedItems": [
+            {
+              "productName": "Chinese Spinach",
+              "productQuantity": 2,
+              "productPrice": 40
+            },
+            {
+              "productName": "Dwarf copper leaf",
+              "productQuantity": 2,
+              "productPrice": 28
+            },
+            {
+              "productName": "Cardiospermum halicacabum",
+              "productQuantity": 3,
+              "productPrice": 60
+            }
+          ],
+          "paymentMenthod": "Cash On Delivery",
+          "amountPaid": "not paid"
+        },
+        {
+          "orderId": 956151,
+          "totalPrice": 507,
+          "categoryName": "Fruit",
+          "categroyImage": "./assets/images/fruit.jpg",
+          "address": {
+            "adress": "MuniyapattyKongunadu",
+            "doorNo": "1008",
+            "landmark": "nearkovil",
+            "district": "Chinnasalem",
+            "addressType": "Home",
+            "iconType": "fa-house"
+          },
+          "orderedDate": [
+            "Mon",
+            "29-Jan-2024 08:34:30 PM"
+          ],
+          "deliveryDate": [
+            "Mon",
+            "29-Jan-2024 08:36:30 PM"
+          ],
+          "orderedItems": [
+            {
+              "productName": "Pear",
+              "productQuantity": 2,
+              "productPrice": 120
+            },
+            {
+              "productName": "Guava",
+              "productQuantity": 3,
+              "productPrice": 270
+            },
+            {
+              "productName": "Kiwi",
+              "productQuantity": 1,
+              "productPrice": 74
+            }
+          ],
+          "paymentMenthod": "Cash On Delivery",
+          "amountPaid": "not paid"
+        }
+      ],
+      "orderedDate": [
+        "29-Jan-2024 11:47:21 AM",
+        "29-Jan-2024 08:35:30 PM"
+      ],
+      "deliveredDate": [
+        "29-Jan-2024 08:36:30 PM"
+      ],
       "Orders": [],
       "deliveredOrders": [
         {
@@ -939,6 +1229,47 @@
           "deliveryDate": [
             "Mon",
             "24-Jul-2023 05:37:34 PM"
+          ],
+          "orderedItems": [
+            {
+              "productName": "Chinese Spinach",
+              "productQuantity": 2,
+              "productPrice": 40
+            },
+            {
+              "productName": "Dwarf copper leaf",
+              "productQuantity": 2,
+              "productPrice": 28
+            },
+            {
+              "productName": "Cardiospermum halicacabum",
+              "productQuantity": 3,
+              "productPrice": 60
+            }
+          ],
+          "paymentMenthod": "Cash On Delivery",
+          "amountPaid": "not paid"
+        },
+        {
+          "orderId": 37397,
+          "totalPrice": 171,
+          "categoryName": "Spinch",
+          "categroyImage": "./assets/images/spinch1.jpeg",
+          "address": {
+            "adress": "MuniyapattyKongunadu",
+            "doorNo": "1008",
+            "landmark": "nearkovil",
+            "district": "Chinnasalem",
+            "addressType": "Home",
+            "iconType": "fa-house"
+          },
+          "orderedDate": [
+            "Mon",
+            "29-Jan-2024 11:41:27 AM"
+          ],
+          "deliveryDate": [
+            "Mon",
+            "29-Jan-2024 11:43:27 AM"
           ],
           "orderedItems": [
             {

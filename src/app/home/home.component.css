@@ -3,9 +3,9 @@
 
 /* slide show*/
 img{
-  width: 90%;
+  width: 100%;
   height: 80vh;
-  margin-left: 5%;
+  margin-left: 0%;
 }
 .HomeSlideShow{
   position: relative;

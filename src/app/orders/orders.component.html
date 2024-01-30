@@ -12,7 +12,7 @@
   <div class="orderBox">
   <div class="commonBox" *ngFor="let OrderItems of newOrderDetails; let indexNumber=index ">
 <div class="commonBoxes">
-  <div><img src="{{OrderItems.categoryImage}}" alt=""></div>
+  <!-- <div><img src="{{OrderItems.categoryImage}}" alt=""></div> -->
   <div>
     <p>cancel this order within {{OrderItems.deliveryDate[0]}},  {{cancelTime[indexNumber]}}</p>
     <h2>{{OrderItems.categoryName}}</h2>
@@ -47,7 +47,7 @@
   <div class="orderBox">
   <div class="commonBox" *ngFor="let OrderItems of pastOrderDetails;let indexNumber=index">
   <div class="commonBoxes">
-  <div><img src="{{OrderItems.categoryImage}}" alt=""></div>
+  <!-- <div><img src="{{OrderItems.categoryImage}}" alt=""></div> -->
   <div>
     <p style="margin-left: 400px;">Yet to be Deliver <i class="fa-solid fa-circle-xmark" style="color: red;"></i></p>
     <h2>{{OrderItems.categoryName}}</h2>
@@ -80,7 +80,7 @@
   <div class="orderBox">
   <div class="commonBox" *ngFor="let OrderItems of deliveredOrderDetails; let indexNumber=index ">
 <div class="commonBoxes">
-  <div><img src="{{OrderItems.categoryImage}}" alt=""></div>
+  <!-- <div><img src="{{OrderItems.categoryImage}}" alt=""></div> -->
   <div>
     <p>Delivered on {{OrderItems.deliveryDate[0]}},  {{OrderItems.deliveryDate[1]}} <i class="fa-solid fa-circle-check"></i></p>
     <h2>{{OrderItems.categoryName}}</h2>
@@ -124,7 +124,7 @@
           <h2>{{viewDetailsInfo.address.doorNo}}, {{viewDetailsInfo.address.landmark}},{{viewDetailsInfo.address.adress}} <br> {{viewDetailsInfo.address.district}}</h2>
         </div>
         <div class="innerItemDetails1" style="margin-bottom: 10px;" *ngIf="isDeliverTime">
-          <h2><i class="fa-solid fa-circle-check" style="color:green"></i>&nbsp;&nbsp;Delivered on {{viewDetailsInfo.deliveryDate[0]}},  {{viewDetailsInfo.deliveryDate[1]}}</h2>
+          <h2><i class="fa-solid fa-circle-check" style="color:red"></i>&nbsp;&nbsp;Delivered on {{viewDetailsInfo.deliveryDate[0]}},  {{viewDetailsInfo.deliveryDate[1]}}</h2>
         </div>
 
       </div>

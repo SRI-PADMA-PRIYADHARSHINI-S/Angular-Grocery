@@ -51,9 +51,6 @@
           <input type="text"placeholder="Enter Category Description" formControlName="productvariety">
         </div>
         <div class="inner-form-contents">
-          <input type="text"placeholder="Enter Category Delivery time" formControlName="timeDel">
-        </div>
-        <div class="inner-form-contents">
           <input type="text"placeholder="Enter Category offer" formControlName="offer">
         </div>
         <div class="inner-form-contents">
@@ -88,13 +85,7 @@
           <input type="text"placeholder="Enter Category Description" formControlName="productvariety">
         </div>
         <div class="inner-form-contents">
-          <input type="text"placeholder="Enter category Delivery time" formControlName="timeDel">
-        </div>
-        <div class="inner-form-contents">
           <input type="text"placeholder="Enter Category offer" formControlName="offer">
-        </div>
-        <div class="inner-form-contents">
-          <input type="text"placeholder="Enter CouponCode" formControlName="CouponCode">
         </div>
         <div class="inner-form-contents">
           <button [disabled]="!UpdateCategoryForm.valid" (click)="UpdateCategoryDetails(UpdateCategoryForm.value)">Update</button>

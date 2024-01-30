@@ -11,7 +11,7 @@
   <div class="orderBox">
   <div class="commonBox" *ngFor="let OrderItems of pastOrderDetails; let indexNumber=index ">
 <div class="commonBoxes">
-  <div><img src="{{OrderItems.categoryImage}}" alt=""></div>
+  <div><img src="{{OrderItems.productImage}}" alt=""></div>
   <div>
     <p>yet to be deliver <i class="fa-solid fa-circle-xmark" style="color: red;"></i></p>
     <h2 (click)="categoryRoute(indexNumber)">{{OrderItems.categoryName}}</h2>
